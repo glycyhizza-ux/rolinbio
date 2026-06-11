@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主要产品 - Rolin Bio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-dna"></i> Rolin Bio
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="product.html" class="active">主要产品</a></li>
+                <li><a href="services.html">服务项目</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>主要产品</h1>
+            <p>涵盖医疗器械与药品两大领域，满足全球市场需求</p>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <div class="product-list">
+                <div class="product-card">
+                    <i class="fas fa-syringe"></i>
+                    <h3>注射器 & 输液器</h3>
+                    <p>高品质一次性医用耗材，符合 ISO 13485 标准</p>
+                </div>
+                <div class="product-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>监护仪 & 诊断设备</h3>
+                    <p>多参数监护仪、血压计、血糖仪等家用及临床设备</p>
+                </div>
+                <div class="product-card">
+                    <i class="fas fa-pills"></i>
+                    <h3>抗生素 & 常用药品</h3>
+                    <p>通过 WHO-GMP 认证的原料药及制剂</p>
+                </div>
+                <div class="product-card">
+                    <i class="fas fa-band-aid"></i>
+                    <h3>手术耗材 & 敷料</h3>
+                    <p>无菌纱布、创口贴、手术缝合线等</p>
+                </div>
+                <div class="product-card">
+                    <i class="fas fa-microscope"></i>
+                    <h3>体外诊断试剂</h3>
+                    <p>传染病检测、肿瘤标志物等快速诊断试剂</p>
+                </div>
+                <div class="product-card">
+                    <i class="fas fa-lungs"></i>
+                    <h3>呼吸机 & 麻醉机</h3>
+                    <p>急救与手术室必备设备，CE/MDR 认证</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rolin Bio. All rights reserved.</p>
+            <p>Email: bd@rolinbio.com</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function(){
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

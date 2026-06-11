@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolin Bio | 医药器械出海专家</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-dna"></i> Rolin Bio
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="product.html">主要产品</a></li>
+                <li><a href="services.html">服务项目</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <header class="hero">
+        <div class="container">
+            <h1>专注医疗器械与药品<br>一站式出海解决方案</h1>
+            <p>海外产品注册代理 · 法规咨询 · 市场准入 · 贸易落地</p>
+            <a href="contact.html" class="btn-primary">立即咨询</a>
+        </div>
+    </header>
+
+    <!-- 公司简介 -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">关于我们</h2>
+            <p>Rolin Bio 是一家专注于为医疗器械和药品企业提供国际化服务的专业机构。我们深耕海外市场，熟悉东南亚、中东非洲、独联体等地区的药政法规体系，为客户提供产品出口贸易、海外注册代理、法规合规咨询及持证服务。帮助中国企业高效、合规地进入全球市场。</p>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">核心优势</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fas fa-globe"></i>
+                    <h3>全球视野</h3>
+                    <p>深入理解东南亚、中东非、独联体等区域药政法规</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>注册代理</h3>
+                    <p>高效完成海外产品注册、许可证办理及持证管理</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>贸易落地</h3>
+                    <p>从市场调研到渠道对接，全程陪伴式出海服务</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rolin Bio. All rights reserved.</p>
+            <p>Email: bd@rolinbio.com</p>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.querySelector('.menu-toggle').addEventListener('click', function(){
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

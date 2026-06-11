@@ -1,0 +1,394 @@
+/* ===== 全局重置 & 基础 ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f9fcff;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== 导航栏 ===== */
+.navbar {
+    background: linear-gradient(135deg, #005bb5, #0088ff);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 15px rgba(0,91,181,0.3);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo i {
+    margin-right: 8px;
+    color: #aad4ff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    border-bottom-color: #fff;
+}
+
+.menu-toggle {
+    display: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ===== Hero 区域 ===== */
+.hero {
+    background: linear-gradient(135deg, #0073e6, #33aaff);
+    color: #fff;
+    text-align: center;
+    padding: 140px 20px 100px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #fff;
+    color: #0073e6;
+    padding: 14px 36px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+    background: #e6f2ff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* ===== 通用 section 标题 ===== */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #005bb5;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #0088ff, #33aaff);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ===== 关于我们 ===== */
+.about {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.about p {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* ===== 核心优势（首页） ===== */
+.features {
+    padding: 80px 0;
+    background: #f0f7ff;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,91,181,0.07);
+    transition: 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,91,181,0.12);
+}
+
+.feature-item i {
+    font-size: 2.5rem;
+    color: #0088ff;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.4rem;
+    color: #005bb5;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: #666;
+}
+
+/* ===== 页面内部 Hero（子页） ===== */
+.page-hero {
+    background: linear-gradient(135deg, #0066cc, #3399ff);
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px 60px;
+}
+
+.page-hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.page-hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ===== 产品页 ===== */
+.products {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #f4faff;
+    padding: 35px 20px;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid #e0efff;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    border-color: #0088ff;
+    box-shadow: 0 8px 25px rgba(0,136,255,0.1);
+}
+
+.product-card i {
+    font-size: 2.8rem;
+    color: #0073e6;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.3rem;
+    color: #005bb5;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ===== 服务页 ===== */
+.services-list {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.service-item {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 45px;
+    align-items: flex-start;
+    background: #f8fbff;
+    padding: 30px 25px;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.service-item i {
+    font-size: 2.5rem;
+    color: #0088ff;
+    min-width: 55px;
+    margin-top: 5px;
+}
+
+.service-item h3 {
+    color: #005bb5;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.service-item p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* ===== 联系页 ===== */
+.contact {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.contact .container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    font-size: 1.6rem;
+    color: #005bb5;
+    margin-bottom: 25px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.contact-info i {
+    width: 26px;
+    color: #0088ff;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    border: 1px solid #d0ddee;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fafcff;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0088ff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,136,255,0.15);
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+    padding: 14px 38px;
+}
+
+/* ===== 页脚 ===== */
+footer {
+    background: linear-gradient(135deg, #003d80, #005bb5);
+    color: #ccc;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p:last-child {
+    color: #aad4ff;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0066cc;
+        position: absolute;
+        top: 62px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        gap: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .contact .container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - Rolin Bio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-dna"></i> Rolin Bio
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="product.html">主要产品</a></li>
+                <li><a href="services.html">服务项目</a></li>
+                <li><a href="contact.html" class="active">联系我们</a></li>
+            </ul>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>联系我们</h1>
+            <p>期待与您携手开拓全球市场</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-info">
+                <h2>联系方式</h2>
+                <p><i class="fas fa-envelope"></i> bd@rolinbio.com</p>
+                <p><i class="fas fa-phone-alt"></i> +86-21-XXXX-XXXX</p>
+                <p><i class="fas fa-map-marker-alt"></i> 上海市浦东新区XX大厦</p>
+            </div>
+            <form action="mailto:bd@rolinbio.com" method="post" enctype="text/plain" class="contact-form">
+                <h2>发送消息</h2>
+                <input type="text" name="name" placeholder="您的姓名" required>
+                <input type="email" name="email" placeholder="您的邮箱" required>
+                <textarea name="message" rows="5" placeholder="请输入您的需求..." required></textarea>
+                <button type="submit" class="btn-primary">发送</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rolin Bio. All rights reserved.</p>
+            <p>Email: bd@rolinbio.com</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function(){
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
