@@ -387,3 +387,18 @@ footer p:last-child {
         gap: 40px;
     }
 }
+/* ===== 首页标题淡入动画 ===== */
+.hero h1 {
+    animation: fadeUp 0.8s ease-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
