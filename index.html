@@ -1,84 +1,173 @@
-<!DOCTYPE html><html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title data-i18n="site-title">Rolin Bio | 医疗器械与药品出海专家</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head><body>
-
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rolin Bio | 医疗器械与药品出海专家</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:#1e293b;background:#fff}
+    :root{--primary:#5E2A84;--primary-dark:#4A2169;--primary-light:#F3EFF7;--text-dark:#1e293b;--text-light:#64748b;--white:#fff;--border:#e2e8f0}
+    .container{width:90%;max-width:1200px;margin:0 auto;padding:0 15px}
+    .tag{display:inline-block;font-size:.875rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--primary);margin-bottom:.5rem}
+    .btn{display:inline-block;padding:.75rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;cursor:pointer;transition:all .3s ease;border:none}
+    .btn-primary{background:var(--primary);color:var(--white)}.btn-primary:hover{background:var(--primary-dark)}
+    .btn-outline{background:transparent;color:var(--primary);border:2px solid var(--primary)}.btn-outline:hover{background:var(--primary);color:var(--white)}
+    .tb{background:var(--primary);color:var(--white);padding:.5rem 0}
+    .tb-in{display:flex;justify-content:space-between;align-items:center;width:90%;max-width:1200px;margin:0 auto}
+    .tb-l span{margin-right:1.5rem;font-size:.875rem}
+    .tb-r .lang-btn{background:var(--primary-dark);color:var(--white);border:none;padding:.3rem .8rem;border-radius:4px;cursor:pointer;font-size:.875rem}
+    .hb{background:var(--white);box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top:0;z-index:100}
+    .hb-in{display:flex;justify-content:space-between;align-items:center;width:90%;max-width:1200px;margin:0 auto;padding:1rem 0}
+    .logo{display:flex;align-items:center;text-decoration:none;font-size:1.5rem;font-weight:700;color:var(--primary)}
+    .logo .ico{width:40px;height:40px;margin-right:.5rem;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.2rem}
+    .hm ul{display:flex;list-style:none}
+    .hm li{margin-left:2rem}
+    .hm a{text-decoration:none;color:var(--text-dark);font-weight:500;transition:color .3s}
+    .hm a:hover,.hm a.active{color:var(--primary)}
+    .hb-burger{display:none;flex-direction:column;justify-content:space-around;width:30px;height:25px;background:transparent;border:none;cursor:pointer}
+    .hb-burger span{display:block;height:3px;width:100%;background:var(--text-dark);border-radius:3px}
+    .hero{padding:5rem 0;background:var(--primary-light)}
+    .hero-in{display:flex;align-items:center;justify-content:space-between;width:90%;max-width:1200px;margin:0 auto}
+    .hero-text{flex:1;padding-right:2rem}
+    .hero-text h1{font-size:3rem;line-height:1.2;margin-bottom:1.5rem;color:var(--text-dark)}
+    .hero-text h1 span{color:var(--primary)}
+    .hero-text p{font-size:1.1rem;color:var(--text-light);margin-bottom:2rem;max-width:580px}
+    .hero-btns{display:flex;gap:1rem}
+    .hero-img{flex:1;text-align:center}
+    .hero-img .placeholder{width:350px;height:270px;background:linear-gradient(135deg,#d8b4fe,#c084fc);border-radius:20px;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:4rem;box-shadow:0 20px 40px rgba(94,42,132,.15)}
+    .section-header{text-align:center;margin-bottom:3rem}
+    .section-header h2{font-size:2.5rem;color:var(--text-dark);margin-bottom:1rem}
+    .section-header p{font-size:1.1rem;color:var(--text-light);max-width:660px;margin:0 auto}
+    .features,.products,.resources,.contact{padding:5rem 0}
+    .features-grid,.products-grid,.resources-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+    .card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:2rem;text-align:center;transition:transform .3s,box-shadow .3s}
+    .card:hover{transform:translateY(-5px);box-shadow:0 12px 24px rgba(0,0,0,.06)}
+    .card .icon{font-size:2.5rem;color:var(--primary);margin-bottom:1.2rem}
+    .card h3{font-size:1.4rem;margin-bottom:.8rem;color:var(--text-dark)}
+    .card p{color:var(--text-light);font-size:.95rem}
+    .resource-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.5rem;display:flex;gap:1.2rem;align-items:flex-start}
+    .resource-card .icon{font-size:2rem;color:var(--primary)}
+    .resource-card h3{font-size:1.2rem;margin-bottom:.5rem;color:var(--text-dark)}
+    .resource-card p{color:var(--text-light);font-size:.9rem;margin-bottom:.8rem}
+    .resource-link{color:var(--primary);font-weight:600;text-decoration:none}
+    .contact-form{max-width:560px;margin:0 auto 2rem}
+    .form-group{margin-bottom:1.2rem}
+    .form-group input,.form-group textarea{width:100%;padding:.8rem 1rem;border:1px solid var(--border);border-radius:8px;font-size:1rem;font-family:inherit;transition:border-color .3s}
+    .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--primary)}
+    .contact-info{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:2rem}
+    .info-item{display:flex;align-items:center;gap:.5rem;color:var(--text-light)}
+    .info-item i{color:var(--primary)}
+    .ft{background:var(--primary);color:var(--white);padding:3rem 0 1.5rem}
+    .fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;width:90%;max-width:1200px;margin:0 auto}
+    .fb .logo{color:var(--white);margin-bottom:1rem}
+    .ff h4{font-size:1rem;margin-bottom:1rem;text-transform:uppercase;letter-spacing:1px}
+    .ff a,.ff p{color:rgba(255,255,255,.8);text-decoration:none;display:block;margin-bottom:.5rem;font-size:.9rem}
+    .ff a:hover{color:var(--white)}
+    .fbot{text-align:center;padding-top:2rem;margin-top:2rem;border-top:1px solid rgba(255,255,255,.15);font-size:.85rem;color:rgba(255,255,255,.6)}
+    @media(max-width:868px){
+      .hm ul{display:none;flex-direction:column;background:var(--white);position:absolute;top:73px;left:0;width:100%;padding:1.5rem;box-shadow:0 8px 16px rgba(0,0,0,.1)}
+      .hm ul.open{display:flex}
+      .hm li{margin:.5rem 0}
+      .hb-burger{display:flex}
+      .hero-in{flex-direction:column;text-align:center}
+      .hero-text{padding-right:0;margin-bottom:2rem}
+      .hero-btns{justify-content:center}
+      .hero-img .placeholder{width:280px;height:210px;font-size:3rem}
+    }
+    @media(max-width:480px){.hero-text h1{font-size:2rem}.section-header h2{font-size:1.8rem}}
+  </style>
+</head>
+<body>
 <div class="tb"><div class="tb-in">
-  <div><span><i class="fa-solid fa-phone"></i> <span data-i18n="tel">+86-21-XXXX-XXXX</span></span>
-  <span style="margin-left:16px"><i class="fa-solid fa-envelope"></i> <span data-i18n="email">bd@rolinbio.com</span></span></div>
-  <div class="tb-r">
-    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="#"><i class="fa-brands fa-weixin"></i></a>
-    <button class="lb" id="langBtn">EN</button>
-  </div>
-</div>
-
-<nav class="primary"><div class="nav-in">
-  <a class="logo" href="index.html"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
-  <ul class="nl" id="menu">
-    <li><a href="index.html" class="active" data-i18n="m-home">首页</a></li>
+  <div class="tb-l"><span><i class="fa-solid fa-phone"></i> +86-21-XXXX-XXXX</span><span><i class="fa-solid fa-envelope"></i> bd@rolinbio.com</span></div>
+  <div class="tb-r"><button id="langBtn" class="lang-btn">EN</button></div>
+</div></div>
+<header class="hb"><div class="hb-in">
+  <a href="index.html" class="logo"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
+  <nav class="hm"><ul id="menu">
+    <li><a href="index.html" data-i18n="m-home">首页</a></li>
     <li><a href="product.html" data-i18n="m-prod">主要产品</a></li>
     <li><a href="services.html" data-i18n="m-serv">服务项目</a></li>
-    <li><a href="resources.html" data-i18n="m-res">资料库</a></li>
+    <li><a href="library.html" data-i18n="m-lib">资料库</a></li>
     <li><a href="contact.html" data-i18n="m-contact">联系我们</a></li>
-  </ul>
-  <button class="burger" id="burger"><span></span><span></span><span></span></button>
-</div></nav>
-
-<section class="hero"><div class="hg">
-  <div>
-    <p class="ht" data-i18n="h-tag">MEDTECH & PHARMA · GLOBAL MARKET ACCESS</p>
-    <h1 data-i18n="h-title"><span data-i18n="h-title">让中国医疗产品</span><br><em>合规进入全球市场</em></h1>
-    <p class="hd" data-i18n="h-desc"></p>
-    <div class="hb">
-      <a href="services.html" class="btn btn-pri" data-i18n="h-cta1">查看服务</a>
-      <a href="contact.html" class="btn btn-out" data-i18n="h-cta2">对接 BD 团队</a>
-    </div>
+  </ul></nav>
+  <button class="hb-burger" id="burgerBtn" aria-label="菜单"><span></span><span></span><span></span></button>
+</div></header>
+<section class="hero"><div class="hero-in">
+  <div class="hero-text">
+    <span class="tag" data-i18n="hero-tag">MEDTECH & PHARMA · GLOBAL MARKET ACCESS</span>
+    <h1 data-i18n="hero-title">让中国医疗产品<br /><span>合规进入全球市场</span></h1>
+    <p data-i18n="hero-desc">Rolin Bio 专注医疗器械与药品的海外产品注册代理、法规持证、贸易落地与市场准入——熟悉东南亚、中东非、独联体等区域药政体系，把“能出口”变成“能持续卖”。</p>
+    <div class="hero-btns"><a href="services.html" class="btn btn-primary" data-i18n="hero-btn1">查看服务</a><a href="#contact" class="btn btn-outline" data-i18n="hero-btn2">对接 BD 团队</a></div>
   </div>
-  <div class="hv"><div class="hvb"><i class="fa-solid fa-globe-americas"></i></div></div>
-</section>
-
-<section class="lm-s"><div class="lm-c">
-  <div class="st"><p class="stag" data-i18n="c-tag">CORE CAPABILITIES</p>
-    <h2 data-i18n="c-title">我们做什么</h2>
-    <p data-i18n="c-lead">从注册资料到持证上市，再到渠道落地，提供面向海外的端到端合规交付。</p>
+  <div class="hero-img"><div class="placeholder"><i class="fa-solid fa-globe-americas"></i></div></div>
+</div></section>
+<section class="features"><div class="container">
+  <div class="section-header">
+    <span class="tag" data-i18n="f-tag">WHY CHOOSE US</span>
+    <h2 data-i18n="f-title">我们的核心优势</h2>
+    <p data-i18n="f-desc">以合规为基石，以效率为核心，助力医疗产品全球化布局</p>
   </div>
-  <div class="g3">
-    <div class="card"><div class="ci"><i class="fa-solid fa-file-signature"></i></div>
-      <h3 data-i18n="c1-t"></h3><p data-i18n="c1-d"></p></div>
-    <div class="card"><div class="ci"><i class="fa-solid fa-shield-halved"></i></div>
-      <h3 data-i18n="c2-t"></h3><p data-i18n="c2-d"></p></div>
-    <div class="card"><div class="ci"><i class="fa-solid fa-route"></i></div>
-      <h3 data-i18n="c3-t"></h3><p data-i18n="c3-d"></p></div>
+  <div class="features-grid">
+    <div class="card"><div class="icon"><i class="fa-solid fa-certificate"></i></div><h3 data-i18n="f1-title">全球合规认证</h3><p data-i18n="f1-desc">精通 FDA、CE、NMPA 及东南亚/中东非等区域法规，提供一站式认证方案</p></div>
+    <div class="card"><div class="icon"><i class="fa-solid fa-shipping-fast"></i></div><h3 data-i18n="f2-title">高效贸易落地</h3><p data-i18n="f2-desc">从出口许可到冷链物流，全程把控供应链，确保产品安全交付</p></div>
+    <div class="card"><div class="icon"><i class="fa-solid fa-users"></i></div><h3 data-i18n="f3-title">本地化服务团队</h3><p data-i18n="f3-desc">海外属地化专家支持，快速响应市场需求，解决本地化合规难题</p></div>
   </div>
 </div></section>
-
-<section class="lm-s lm-s--alt"><div class="lm-c">
-  <div class="st"><p class="stag" data-i18n="r-tag">REGIONAL EXPERTISE</p>
-    <h2 data-i18n="r-title">重点覆盖区域</h2>
-    <p data-i18n="r-lead">我们不只懂"法规条文"，更懂当地卫生当局、海关与分销生态的真实运作方式。</p>
+<section class="products"><div class="container">
+  <div class="section-header">
+    <span class="tag" data-i18n="p-tag">PRODUCTS</span>
+    <h2 data-i18n="p-title">主要产品领域</h2>
+    <p data-i18n="p-desc">覆盖医疗器械与药品，满足全球市场准入需求</p>
   </div>
-  <div class="tgs">
-    <span class="tg" data-i18n="reg1"></span>
-    <span class="tg" data-i18n="reg2"></span>
-    <span class="tg" data-i18n="reg3"></span>
-    <span class="tg" data-i18n="reg4"></span>
-    <span class="tg" data-i18n="reg5"></span>
+  <div class="products-grid">
+    <div class="card"><div class="icon"><i class="fa-solid fa-syringe"></i></div><h3 data-i18n="p1-title">注射器 & 输液器</h3><p data-i18n="p1-desc">高品质一次性医用耗材，符合 ISO 13485 标准</p></div>
+    <div class="card"><div class="icon"><i class="fa-solid fa-heart-pulse"></i></div><h3 data-i18n="p2-title">监护仪 & 诊断设备</h3><p data-i18n="p2-desc">多参数监护仪、血压计、血糖仪等家用及临床设备</p></div>
+    <div class="card"><div class="icon"><i class="fa-solid fa-pills"></i></div><h3 data-i18n="p3-title">抗生素 & 常用药品</h3><p data-i18n="p3-desc">通过 WHO-GMP 认证的原料药及制剂</p></div>
   </div>
 </div></section>
-
+<section class="resources"><div class="container">
+  <div class="section-header">
+    <span class="tag" data-i18n="r-tag">RESOURCES</span>
+    <h2 data-i18n="r-title">行业资料库</h2>
+    <p data-i18n="r-desc">汇聚前沿动态与专业洞察，助力研发与决策</p>
+  </div>
+  <div class="resources-list">
+    <article class="resource-card"><div class="icon"><i class="fa-solid fa-file-contract"></i></div><div><h3 data-i18n="r1-title">合成生物学最新突破</h3><p data-i18n="r1-desc">深度解析新型菌株构建技术，探讨其在药物量产中的成本优势与应用前景。</p><a href="#" class="resource-link" data-i18n="read-more">阅读更多 →</a></div></article>
+    <article class="resource-card"><div class="icon"><i class="fa-solid fa-file-contract"></i></div><div><h3 data-i18n="r2-title">细胞治疗工艺优化指南</h3><p data-i18n="r2-desc">从实验室到商业化生产，关键工艺节点的质控标准与放大生产策略。</p><a href="#" class="resource-link" data-i18n="read-more">阅读更多 →</a></div></article>
+    <article class="resource-card"><div class="icon"><i class="fa-solid fa-file-contract"></i></div><div><h3 data-i18n="r3-title">AI 赋能新药研发白皮书</h3><p data-i18n="r3-desc">人工智能如何缩短靶点发现周期，提升临床前研究效率的案例分析。</p><a href="#" class="resource-link" data-i18n="read-more">阅读更多 →</a></div></article>
+  </div>
+</div></section>
+<section class="contact" id="contact"><div class="container">
+  <div class="section-header">
+    <span class="tag" data-i18n="ct-tag">GET IN TOUCH</span>
+    <h2 data-i18n="ct-title">联系我们</h2>
+    <p data-i18n="ct-lead">发送产品信息至下方邮箱，我们将在 1-2 个工作日内回复</p>
+  </div>
+  <form class="contact-form">
+    <div class="form-group"><input type="text" placeholder="您的姓名" required data-i18n-placeholder="ct-name-placeholder" /></div>
+    <div class="form-group"><input type="email" placeholder="您的邮箱" required data-i18n-placeholder="ct-mail-placeholder" /></div>
+    <div class="form-group"><textarea placeholder="简要描述产品与目标市场" rows="5" required data-i18n-placeholder="ct-msg-placeholder"></textarea></div>
+    <button type="submit" class="btn btn-primary" data-i18n="ct-send">发送咨询</button>
+  </form>
+  <div class="contact-info">
+    <div class="info-item"><i class="fa-solid fa-envelope"></i><span data-i18n="ct-mail">bd@rolinbio.com</span></div>
+    <div class="info-item"><i class="fa-solid fa-phone"></i><span data-i18n="ct-tel">+86-21-XXXX-XXXX</span></div>
+    <div class="info-item"><i class="fa-solid fa-location-dot"></i><span data-i18n="ct-addr">上海（办公室）</span></div>
+  </div>
+</div></section>
 <footer class="ft"><div class="fg">
-  <div class="fb"><a class="logo" href="index.html"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
-    <p style="font-size:.92rem;line-height:1.7;max-width:300px;margin-top:6px" data-i18n="f-desc">专注医疗器械与药品出海合规、注册代理与市场准入服务。</p></div>
-  <div class="ff"><h4>导航</h4>
-    <a href="index.html" data-i18n="m-home">首页</a>
-    <a href="product.html" data-i18n="m-prod">主要产品</a>
-    <a href="services.html" data-i18n="m-serv">服务项目</a>
-    <a href="resources.html" data-i18n="m-res">资料库</a></div>
-  <div class="ff"><h4>联系</h4><p data-i18n="email">bd@rolinbio.com</p><p data-i18n="tel">+86-21-XXXX-XXXX</p></div>
+  <div class="fb"><a href="index.html" class="logo"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a><p data-i18n="f-desc">专注医疗器械与药品出海合规、注册代理与市场准入服务。</p></div>
+  <div class="ff"><h4 data-i18n="nav">导航</h4><a href="index.html" data-i18n="m-home">首页</a><a href="product.html" data-i18n="m-prod">主要产品</a><a href="services.html" data-i18n="m-serv">服务项目</a><a href="library.html" data-i18n="m-lib">资料库</a><a href="contact.html" data-i18n="m-contact">联系我们</a></div>
+  <div class="ff"><h4 data-i18n="contact">联系</h4><p data-i18n="contact-email">bd@rolinbio.com</p><p data-i18n="contact-tel">+86-21-XXXX-XXXX</p></div>
 </div><div class="fbot"><span>&copy; 2025 Rolin Bio. All rights reserved.</span></div></footer>
-
-<script src="js/lang.js"></script>
-</body></html>
+<script>
+const L={zh:{"site-title":"Rolin Bio | 医疗器械与药品出海专家","m-home":"首页","m-prod":"主要产品","m-serv":"服务项目","m-lib":"资料库","m-contact":"联系我们","hero-tag":"MEDTECH & PHARMA · GLOBAL MARKET ACCESS","hero-title":"让中国医疗产品<br><span>合规进入全球市场</span>","hero-desc":"Rolin Bio 专注医疗器械与药品的海外产品注册代理、法规持证、贸易落地与市场准入——熟悉东南亚、中东非、独联体等区域药政体系，把“能出口”变成“能持续卖”。","hero-btn1":"查看服务","hero-btn2":"对接 BD 团队","f-tag":"WHY CHOOSE US","f-title":"我们的核心优势","f-desc":"以合规为基石，以效率为核心，助力医疗产品全球化布局","f1-title":"全球合规认证","f1-desc":"精通 FDA、CE、NMPA 及东南亚/中东非等区域法规，提供一站式认证方案","f2-title":"高效贸易落地","f2-desc":"从出口许可到冷链物流，全程把控供应链，确保产品安全交付","f3-title":"本地化服务团队","f3-desc":"海外属地化专家支持，快速响应市场需求，解决本地化合规难题","p-tag":"PRODUCTS","p-title":"主要产品领域","p-desc":"覆盖医疗器械与药品，满足全球市场准入需求","p1-title":"注射器 & 输液器","p1-desc":"高品质一次性医用耗材，符合 ISO 13485 标准","p2-title":"监护仪 & 诊断设备","p2-desc":"多参数监护仪、血压计、血糖仪等家用及临床设备","p3-title":"抗生素 & 常用药品","p3-desc":"通过 WHO-GMP 认证的原料药及制剂","r-tag":"RESOURCES","r-title":"行业资料库","r-desc":"汇聚前沿动态与专业洞察，助力研发与决策","r1-title":"合成生物学最新突破","r1-desc":"深度解析新型菌株构建技术，探讨其在药物量产中的成本优势与应用前景。","r2-title":"细胞治疗工艺优化指南","r2-desc":"从实验室到商业化生产，关键工艺节点的质控标准与放大生产策略。","r3-title":"AI 赋能新药研发白皮书","r3-desc":"人工智能如何缩短靶点发现周期，提升临床前研究效率的案例分析。","read-more":"阅读更多 →","ct-tag":"GET IN TOUCH","ct-title":"联系我们","ct-lead":"发送产品信息至下方邮箱，我们将在 1-2 个工作日内回复","ct-name-placeholder":"您的姓名","ct-mail-placeholder":"您的邮箱","ct-msg-placeholder":"简要描述产品与目标市场","ct-send":"发送咨询","ct-mail":"bd@rolinbio.com","ct-tel":"+86-21-XXXX-XXXX","ct-addr":"上海（办公室）","nav":"导航","contact":"联系","contact-email":"bd@rolinbio.com","contact-tel":"+86-21-XXXX-XXXX","f-desc":"专注医疗器械与药品出海合规、注册代理与市场准入服务。"},
+en:{"site-title":"Rolin Bio | MedTech & Pharma Global Access","m-home":"Home","m-prod":"Products","m-serv":"Services","m-lib":"Resources","m-contact":"Contact","hero-tag":"MEDTECH & PHARMA · GLOBAL MARKET ACCESS","hero-title":"Bring Chinese Medical Products<br><span>Compliantly to Global Markets</span>","hero-desc":"Rolin Bio specializes in overseas product registration, regulatory holding, trade execution and market access for medical devices and pharmaceuticals — with deep knowledge of SEA, MENA and CIS frameworks.","hero-btn1":"Our Services","hero-btn2":"Talk to BD Team","f-tag":"WHY CHOOSE US","f-title":"Our Core Advantages","f-desc":"Built on compliance, driven by efficiency – empowering global expansion of medical products.","f1-title":"Global Compliance Certification","f1-desc":"Expertise in FDA, CE, NMPA and regional regulations across SEA, Middle East & Africa – one-stop certification solutions.","f2-title":"Efficient Trade Execution","f2-desc":"Full supply chain control from export permits to cold-chain logistics, ensuring safe delivery.","f3-title":"Local Service Teams","f3-desc":"On-ground experts in target markets providing rapid response and local compliance support.","p-tag":"PRODUCTS","p-title":"Core Product Areas","p-desc":"Covering medical devices and pharmaceuticals to meet global market access needs.","p1-title":"Syringes & Infusion Sets","p1-desc":"High-quality disposable medical consumables, ISO 13485 certified.","p2-title":"Monitors & Diagnostic Devices","p2-desc":"Multi-parameter monitors, blood pressure monitors, glucometers, etc.","p3-title":"Antibiotics & Common Drugs","p3-desc":"WHO-GMP certified APIs and formulations.","r-tag":"RESOURCES","r-title":"Industry Library","r-desc":"Curated insights and updates to support your R&D and decision-making.","r1-title":"Latest Breakthroughs in Synthetic Biology","r1-desc":"In-depth analysis of novel strain construction technology and its cost advantages in drug production.","r2-title":"Cell Therapy Process Optimization Guide","r2-desc":"Quality control standards and scale-up strategies from lab to commercial manufacturing.","r3-title":"AI-Empowered Drug R&D White Paper","r3-desc":"Case studies on how AI shortens target discovery cycles and improves preclinical efficiency.","read-more":"Read more →","ct-tag":"GET IN TOUCH","ct-title":"Contact Us","ct-lead":"Send product information to the email below – we reply within 1-2 business days.","ct-name-placeholder":"Your Name","ct-mail-placeholder":"Your Email","ct-msg-placeholder":"Briefly describe product & target market","ct-send":"Send Inquiry","ct-mail":"bd@rolinbio.com","ct-tel":"+86-21-XXXX-XXXX","ct-addr":"Shanghai (Office)","nav":"Navigation","contact":"Contact","contact-email":"bd@rolinbio.com","contact-tel":"+86-21-XXXX-XXXX","f-desc":"Specializing in medtech & pharma export compliance, registration agency and market access services."}};
+let currentLang='zh';function renderLang(lang){const t=L[lang]||L.zh;document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.getAttribute('data-i18n');if(t[key]!==undefined)el.innerHTML=t[key]});document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const key=el.getAttribute('data-i18n-placeholder');if(t[key]!==undefined)el.placeholder=t[key]});document.title=t['site-title']||'Rolin Bio';const btn=document.getElementById('langBtn');if(btn)btn.textContent=(lang==='zh'?'EN':'中文');document.documentElement.lang=lang;currentLang=lang}
+document.addEventListener('DOMContentLoaded',()=>{document.getElementById('langBtn')?.addEventListener('click',()=>{renderLang(currentLang==='zh'?'en':'zh')});document.getElementById('burgerBtn')?.addEventListener('click',()=>{document.getElementById('menu')?.classList.toggle('open')});renderLang('zh')});
+</script>
+</body>
+</html>
