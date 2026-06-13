@@ -1,9 +1,113 @@
-<!DOCTYPE html><html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title data-i18n="site-title">Rolin Bio | 服务项目</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head><body>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="site-title">Rolin Bio | 服务项目</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-<div class="tb"><div class="tb-in">
-  <div><span><i
+    <!-- 顶部通栏 -->
+    <div class="tb"><div class="tb-in">
+        <div class="tb-l"><span><i class="fa-solid fa-phone"></i> <span data-i18n="contact-tel"></span></span></div>
+        <div class="tb-r"><span><i class="fa-solid fa-envelope"></i> <span data-i18n="contact-email"></span></span></div>
+    </div></div>
+
+    <!-- 主导航栏 -->
+    <header class="hb"><div class="hb-in">
+        <a class="logo" href="index.html"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
+        <nav class="hm">
+            <ul>
+                <li><a href="index.html" data-i18n="m-home">首页</a></li>
+                <li><a href="product.html" data-i18n="m-prod">主要产品</a></li>
+                <li><a href="services.html" class="active" data-i18n="m-serv">服务项目</a></li>
+                <li><a href="library.html" data-i18n="m-lib">资料库</a></li>
+                <li><a href="contact.html" data-i18n="m-contact">联系我们</a></li>
+            </ul>
+        </nav>
+        <div class="hb-r">
+            <button class="hb-lang nb-lang-switch"><span id="langBtn" class="nb-lang-btn">EN</span></button>
+            <div class="hb-burger"><span></span><span></span><span></span></div>
+        </div>
+    </div></header>
+
+    <!-- 主内容区 -->
+    <main class="pg">
+        <div class="pg-bd">
+            <!-- 页面标题 -->
+            <div class="pg-h">
+                <p class="stag" data-i18n="s-tag">SERVICES</p>
+                <h1 data-i18n="s-title">服务项目</h1>
+                <p data-i18n="s-lead">从第一份注册策略报告，到持证上市后的每年续证与不良事件上报——全程可审计、可追溯。</p>
+            </div>
+
+            <!-- 服务列表（使用 spc 样式） -->
+            <div class="spc">
+                <div class="sp">
+                    <div class="spd"></div>
+                    <div>
+                        <h4 data-i18n="s1-t">海外注册代理（RA）</h4>
+                        <p data-i18n="s1-d">目标国 RA 委任 / 本地代理人备案；协助完成 AR 卷宗整理、审评问答、现场/远程核查应对与证书签发跟踪。</p>
+                    </div>
+                </div>
+                <div class="sp">
+                    <div class="spd"></div>
+                    <div>
+                        <h4 data-i18n="s2-t">法规策略 & 合规体系</h4>
+                        <p data-i18n="s2-d">按产品分类（MD/IVD/Drug）输出国别准入路线图；搭建本地化标签、IFU、风险管理文件（ISO 14971）与技术文档结构。</p>
+                    </div>
+                </div>
+                <div class="sp">
+                    <div class="spd"></div>
+                    <div>
+                        <h4 data-i18n="s3-t">持证 & 上市后监管（PMS/PV）</h4>
+                        <p data-i18n="s3-d">提供 MAH/持证代表服务；建立投诉记录、不良事件上报、趋势分析、CAPA 追踪与年度更新日历。</p>
+                    </div>
+                </div>
+                <div class="sp">
+                    <div class="spd"></div>
+                    <div>
+                        <h4 data-i18n="s4-t">贸易落地 & 渠道对接</h4>
+                        <p data-i18n="s4-d">出口许可证、原产地证、报关单证与冷链/防湿/防磁包装方案；匹配进口商资质审查与经销协议框架。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="ft">
+        <div class="fg">
+            <div class="fb">
+                <a class="logo" href="index.html"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
+                <p style="font-size:.92rem;line-height:1.7;max-width:300px;margin-top:6px" data-i18n="f-desc">专注医疗器械与药品出海合规、注册代理与市场准入服务。</p>
+            </div>
+            <div class="ff">
+                <h4 data-i18n="nav">导航</h4>
+                <a href="index.html" data-i18n="m-home">首页</a>
+                <a href="product.html" data-i18n="m-prod">主要产品</a>
+                <a href="services.html" data-i18n="m-serv">服务项目</a>
+                <a href="library.html" data-i18n="m-lib">资料库</a>
+            </div>
+            <div class="ff">
+                <h4 data-i18n="contact">联系</h4>
+                <p data-i18n="contact-email">bd@rolinbio.com</p>
+                <p data-i18n="contact-tel">+86-21-XXXX-XXXX</p>
+            </div>
+        </div>
+        <div class="fbot">
+            <span>&copy; 2025 Rolin Bio. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="js/lang.js"></script>
+    <script>
+        // 移动端菜单
+        document.querySelector('.hb-burger')?.addEventListener('click', () => {
+            document.querySelector('.hm')?.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
