@@ -508,3 +508,31 @@ footer p:last-child {
   .nb-burger{display:flex;}
   .nb-hero{padding:110px 0 80px;}
 }
+/* ===== 语言切换按钮 ===== */
+.nb-lang-switch {
+  margin-left: 20px;
+}
+
+.nb-lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nb-lang-btn:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: #fff;
+}
+
+@media (max-width: 860px) {
+  .nb-lang-switch {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+}
