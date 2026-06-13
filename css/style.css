@@ -134,3 +134,25 @@ nav.primary{
   .lm-s{padding:72px 0}
   .hero{padding:100px 0 80px}
 }
+/* Logo 图片样式 */
+.logo-img {
+    height: 40px;       /* 高度可以根据你的审美调整，比如 35px - 50px */
+    width: auto;        /* 宽度自动保持比例 */
+    vertical-align: middle; /* 垂直居中对齐 */
+    margin-right: 8px;  /* 图片和文字之间的间距 */
+}
+
+/* Logo 整体容器 */
+.logo {
+    display: flex;      /* 使用 Flex 布局让图片和文字对齐 */
+    align-items: center;
+    text-decoration: none; /* 去除下划线 */
+    color: white;       /* 保持文字颜色为白色 */
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* 如果保留了文字，可以稍微调整一下文字样式 */
+.logo-text {
+    vertical-align: middle;
+}
