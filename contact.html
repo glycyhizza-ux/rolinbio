@@ -1,64 +1,112 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>联系我们 - Rolin Bio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rolin Bio | 联系我们</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:#1e293b;background:#fff}
+    :root{--primary:#5E2A84;--primary-dark:#4A2169;--primary-light:#F3EFF7;--text-dark:#1e293b;--text-light:#64748b;--white:#fff;--border:#e2e8f0}
+    .container{width:90%;max-width:1200px;margin:0 auto;padding:0 15px}
+    .tag{display:inline-block;font-size:.875rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--primary);margin-bottom:.5rem}
+    .btn{display:inline-block;padding:.75rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;cursor:pointer;transition:all .3s ease;border:none}
+    .btn-primary{background:var(--primary);color:var(--white)}.btn-primary:hover{background:var(--primary-dark)}
+    .tb{background:var(--primary);color:var(--white);padding:.5rem 0}
+    .tb-in{display:flex;justify-content:space-between;align-items:center;width:90%;max-width:1200px;margin:0 auto}
+    .tb-l span{margin-right:1.5rem;font-size:.875rem}
+    .tb-r .lang-btn{background:var(--primary-dark);color:var(--white);border:none;padding:.3rem .8rem;border-radius:4px;cursor:pointer;font-size:.875rem}
+    .hb{background:var(--white);box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top:0;z-index:100}
+    .hb-in{display:flex;justify-content:space-between;align-items:center;width:90%;max-width:1200px;margin:0 auto;padding:1rem 0}
+    .logo{display:flex;align-items:center;text-decoration:none;font-size:1.5rem;font-weight:700;color:var(--primary)}
+    .logo .ico{width:40px;height:40px;margin-right:.5rem;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.2rem}
+    .hm ul{display:flex;list-style:none}
+    .hm li{margin-left:2rem}
+    .hm a{text-decoration:none;color:var(--text-dark);font-weight:500;transition:color .3s}
+    .hm a:hover,.hm a.active{color:var(--primary)}
+    .hb-burger{display:none;flex-direction:column;justify-content:space-around;width:30px;height:25px;background:transparent;border:none;cursor:pointer}
+    .hb-burger span{display:block;height:3px;width:100%;background:var(--text-dark);border-radius:3px}
+    .page-header{padding:4rem 0 2rem;background:var(--primary-light);text-align:center}
+    .page-header h1{font-size:2.8rem;color:var(--text-dark);margin-bottom:.5rem}
+    .page-header p{color:var(--text-light);font-size:1.1rem;max-width:600px;margin:0 auto}
+    .contact-section{padding:4rem 0}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+    .contact-form .form-group{margin-bottom:1.2rem}
+    .contact-form input,.contact-form textarea{width:100%;padding:.8rem 1rem;border:1px solid var(--border);border-radius:8px;font-size:1rem;font-family:inherit;transition:border-color .3s}
+    .contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--primary)}
+    .contact-form textarea{resize:vertical;min-height:130px}
+    .contact-info h3{font-size:1.5rem;color:var(--text-dark);margin-bottom:1.5rem}
+    .info-item{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem;color:var(--text-light)}
+    .info-item i{color:var(--primary);font-size:1.2rem;width:24px;text-align:center}
+    .info-item span{font-size:1rem}
+    .map-placeholder{width:100%;height:250px;background:var(--primary-light);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.2rem;margin-top:2rem;border:1px dashed var(--primary)}
+    .ft{background:var(--primary);color:var(--white);padding:3rem 0 1.5rem}
+    .fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;width:90%;max-width:1200px;margin:0 auto}
+    .fb .logo{color:var(--white);margin-bottom:1rem}
+    .ff h4{font-size:1rem;margin-bottom:1rem;text-transform:uppercase;letter-spacing:1px}
+    .ff a,.ff p{color:rgba(255,255,255,.8);text-decoration:none;display:block;margin-bottom:.5rem;font-size:.9rem}
+    .ff a:hover{color:var(--white)}
+    .fbot{text-align:center;padding-top:2rem;margin-top:2rem;border-top:1px solid rgba(255,255,255,.15);font-size:.85rem;color:rgba(255,255,255,.6)}
+    @media(max-width:868px){
+      .hm ul{display:none;flex-direction:column;background:var(--white);position:absolute;top:73px;left:0;width:100%;padding:1.5rem;box-shadow:0 8px 16px rgba(0,0,0,.1)}
+      .hm ul.open{display:flex}
+      .hm li{margin:.5rem 0}
+      .hb-burger{display:flex}
+      .contact-grid{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <i class="fas fa-dna"></i> Rolin Bio
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="product.html">主要产品</a></li>
-                <li><a href="services.html">服务项目</a></li>
-                <li><a href="contact.html" class="active">联系我们</a></li>
-            </ul>
-            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-        </div>
-    </nav>
-
-    <section class="page-hero">
-        <div class="container">
-            <h1>联系我们</h1>
-            <p>期待与您携手开拓全球市场</p>
-        </div>
-    </section>
-
-    <section class="contact">
-        <div class="container">
-            <div class="contact-info">
-                <h2>联系方式</h2>
-                <p><i class="fas fa-envelope"></i> bd@rolinbio.com</p>
-                <p><i class="fas fa-phone-alt"></i> +86-21-XXXX-XXXX</p>
-                <p><i class="fas fa-map-marker-alt"></i> 上海市浦东新区XX大厦</p>
-            </div>
-            <form action="mailto:bd@rolinbio.com" method="post" enctype="text/plain" class="contact-form">
-                <h2>发送消息</h2>
-                <input type="text" name="name" placeholder="您的姓名" required>
-                <input type="email" name="email" placeholder="您的邮箱" required>
-                <textarea name="message" rows="5" placeholder="请输入您的需求..." required></textarea>
-                <button type="submit" class="btn-primary">发送</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Rolin Bio. All rights reserved.</p>
-            <p>Email: bd@rolinbio.com</p>
-        </div>
-    </footer>
-
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function(){
-            document.querySelector('.nav-links').classList.toggle('show');
-        });
-    </script>
+<div class="tb"><div class="tb-in">
+  <div class="tb-l"><span><i class="fa-solid fa-phone"></i> +86-21-XXXX-XXXX</span><span><i class="fa-solid fa-envelope"></i> bd@rolinbio.com</span></div>
+  <div class="tb-r"><button id="langBtn" class="lang-btn">EN</button></div>
+</div></div>
+<header class="hb"><div class="hb-in">
+  <a href="index.html" class="logo"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
+  <nav class="hm"><ul id="menu">
+    <li><a href="index.html" data-i18n="m-home">首页</a></li>
+    <li><a href="product.html" data-i18n="m-prod">主要产品</a></li>
+    <li><a href="services.html" data-i18n="m-serv">服务项目</a></li>
+    <li><a href="library.html" data-i18n="m-lib">资料库</a></li>
+    <li><a href="contact.html" class="active" data-i18n="m-contact">联系我们</a></li>
+  </ul></nav>
+  <button class="hb-burger" id="burgerBtn" aria-label="菜单"><span></span><span></span><span></span></button>
+</div></header>
+<section class="page-header"><div class="container">
+  <span class="tag" data-i18n="ct-tag">GET IN TOUCH</span>
+  <h1 data-i18n="ct-title">联系我们</h1>
+  <p data-i18n="ct-lead">发送产品信息至下方邮箱，我们将在 1-2 个工作日内回复</p>
+</div></section>
+<section class="contact-section"><div class="container">
+  <div class="contact-grid">
+    <div class="contact-form">
+      <form>
+        <div class="form-group"><input type="text" placeholder="您的姓名" required data-i18n-placeholder="ct-name-placeholder" /></div>
+        <div class="form-group"><input type="email" placeholder="您的邮箱" required data-i18n-placeholder="ct-mail-placeholder" /></div>
+        <div class="form-group"><textarea placeholder="简要描述产品与目标市场" rows="5" required data-i18n-placeholder="ct-msg-placeholder"></textarea></div>
+        <button type="submit" class="btn btn-primary" data-i18n="ct-send">发送咨询</button>
+      </form>
+    </div>
+    <div class="contact-info">
+      <h3 data-i18n="ct-info-title">联系方式</h3>
+      <div class="info-item"><i class="fa-solid fa-envelope"></i><span data-i18n="ct-mail">bd@rolinbio.com</span></div>
+      <div class="info-item"><i class="fa-solid fa-phone"></i><span data-i18n="ct-tel">+86-21-XXXX-XXXX</span></div>
+      <div class="info-item"><i class="fa-solid fa-location-dot"></i><span data-i18n="ct-addr">上海（办公室）</span></div>
+      <div class="map-placeholder" data-i18n="map-text">地图占位区域</div>
+    </div>
+  </div>
+</div></section>
+<footer class="ft"><div class="fg">
+  <div class="fb"><a href="index.html" class="logo"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a><p data-i18n="f-desc">专注医疗器械与药品出海合规、注册代理与市场准入服务。</p></div>
+  <div class="ff"><h4 data-i18n="nav">导航</h4><a href="index.html" data-i18n="m-home">首页</a><a href="product.html" data-i18n="m-prod">主要产品</a><a href="services.html" data-i18n="m-serv">服务项目</a><a href="library.html" data-i18n="m-lib">资料库</a><a href="contact.html" data-i18n="m-contact">联系我们</a></div>
+  <div class="ff"><h4 data-i18n="contact">联系</h4><p data-i18n="contact-email">bd@rolinbio.com</p><p data-i18n="contact-tel">+86-21-XXXX-XXXX</p></div>
+</div><div class="fbot"><span>&copy; 2025 Rolin Bio. All rights reserved.</span></div></footer>
+<script>
+const L={zh:{"site-title":"Rolin Bio | 联系我们","m-home":"首页","m-prod":"主要产品","m-serv":"服务项目","m-lib":"资料库","m-contact":"联系我们","ct-tag":"GET IN TOUCH","ct-title":"联系我们","ct-lead":"发送产品信息至下方邮箱，我们将在 1-2 个工作日内回复","ct-name-placeholder":"您的姓名","ct-mail-placeholder":"您的邮箱","ct-msg-placeholder":"简要描述产品与目标市场","ct-send":"发送咨询","ct-mail":"bd@rolinbio.com","ct-tel":"+86-21-XXXX-XXXX","ct-addr":"上海（办公室）","ct-info-title":"联系方式","map-text":"地图占位区域","nav":"导航","contact":"联系","contact-email":"bd@rolinbio.com","contact-tel":"+86-21-XXXX-XXXX","f-desc":"专注医疗器械与药品出海合规、注册代理与市场准入服务。"},
+en:{"site-title":"Rolin Bio | Contact Us","m-home":"Home","m-prod":"Products","m-serv":"Services","m-lib":"Resources","m-contact":"Contact","ct-tag":"GET IN TOUCH","ct-title":"Contact Us","ct-lead":"Send product information to the email below – we reply within 1-2 business days.","ct-name-placeholder":"Your Name","ct-mail-placeholder":"Your Email","ct-msg-placeholder":"Briefly describe product & target market","ct-send":"Send Inquiry","ct-mail":"bd@rolinbio.com","ct-tel":"+86-21-XXXX-XXXX","ct-addr":"Shanghai (Office)","ct-info-title":"Contact Info","map-text":"Map Placeholder","nav":"Navigation","contact":"Contact","contact-email":"bd@rolinbio.com","contact-tel":"+86-21-XXXX-XXXX","f-desc":"Specializing in medtech & pharma export compliance, registration agency and market access services."}};
+let currentLang='zh';function renderLang(lang){const t=L[lang]||L.zh;document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.getAttribute('data-i18n');if(t[key]!==undefined)el.innerHTML=t[key]});document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const key=el.getAttribute('data-i18n-placeholder');if(t[key]!==undefined)el.placeholder=t[key]});document.title=t['site-title']||'Rolin Bio';const btn=document.getElementById('langBtn');if(btn)btn.textContent=(lang==='zh'?'EN':'中文');document.documentElement.lang=lang;currentLang=lang}
+document.addEventListener('DOMContentLoaded',()=>{document.getElementById('langBtn')?.addEventListener('click',()=>{renderLang(currentLang==='zh'?'en':'zh')});document.getElementById('burgerBtn')?.addEventListener('click',()=>{document.getElementById('menu')?.classList.toggle('open')});renderLang('zh')});
+</script>
 </body>
 </html>
