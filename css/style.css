@@ -157,6 +157,10 @@ nav.primary{
     vertical-align: middle;
 }
 .logo-img {
-    height: 50px; /* 你可以根据需要调整，比如 40px, 60px */
+    height: 45px; /* 你可以根据需要调整，比如 40px, 60px */
     width: auto; /* 这一行很重要，保证图片不变形 */
+}
+/* 这种写法优先级更高 */
+img.logo-img {
+    height: 45px !important; 
 }
