@@ -1,48 +1,93 @@
-<!DOCTYPE html><html lang="zh-CN">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title data-i18n="site-title">Rolin Bio | 主要产品</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head><body>
-
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rolin Bio | 主要产品</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* 与首页完全相同，可复用。为节省篇幅，此处省略，实际使用时复制首页的 <style> 内容 */
+    /* 但为了独立运行，下面给出完整样式（与首页一致） */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:#1e293b;background:#fff}
+    :root{--primary:#5E2A84;--primary-dark:#4A2169;--primary-light:#F3EFF7;--text-dark:#1e293b;--text-light:#64748b;--white:#fff;--border:#e2e8f0}
+    .container{width:90%;max-width:1200px;margin:0 auto;padding:0 15px}
+    .tag{display:inline-block;font-size:.875rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--primary);margin-bottom:.5rem}
+    .btn{display:inline-block;padding:.75rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;cursor:pointer;transition:all .3s ease;border:none}
+    .btn-primary{background:var(--primary);color:var(--white)}.btn-primary:hover{background:var(--primary-dark)}
+    .tb{background:var(--primary);color:var(--white);padding:.5rem 0}
+    .tb-in{display:flex;justify-content:space-between;align-items:center;width:90%;max-width:1200px;margin:0 auto}
+    .tb-l span{margin-right:1.5rem;font-size:.875rem}
+    .tb-r .lang-btn{background:var(--primary-dark);color:var(--white);border:none;padding:.3rem .8rem;border-radius:4px;cursor:pointer;font-size:.875rem}
+    .hb{background:var(--white);box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top:0;z-index:100}
+    .hb-in{display:flex;justify-content:space-between;align-items:center;width:90%;max-width:1200px;margin:0 auto;padding:1rem 0}
+    .logo{display:flex;align-items:center;text-decoration:none;font-size:1.5rem;font-weight:700;color:var(--primary)}
+    .logo .ico{width:40px;height:40px;margin-right:.5rem;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.2rem}
+    .hm ul{display:flex;list-style:none}
+    .hm li{margin-left:2rem}
+    .hm a{text-decoration:none;color:var(--text-dark);font-weight:500;transition:color .3s}
+    .hm a:hover,.hm a.active{color:var(--primary)}
+    .hb-burger{display:none;flex-direction:column;justify-content:space-around;width:30px;height:25px;background:transparent;border:none;cursor:pointer}
+    .hb-burger span{display:block;height:3px;width:100%;background:var(--text-dark);border-radius:3px}
+    .page-header{padding:4rem 0 2rem;background:var(--primary-light);text-align:center}
+    .page-header h1{font-size:2.8rem;color:var(--text-dark);margin-bottom:.5rem}
+    .page-header p{color:var(--text-light);font-size:1.1rem;max-width:600px;margin:0 auto}
+    .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;padding:3rem 0}
+    .card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:2rem;text-align:center;transition:transform .3s,box-shadow .3s}
+    .card:hover{transform:translateY(-5px);box-shadow:0 12px 24px rgba(0,0,0,.06)}
+    .card .icon{font-size:2.5rem;color:var(--primary);margin-bottom:1.2rem}
+    .card h3{font-size:1.4rem;margin-bottom:.8rem;color:var(--text-dark)}
+    .card p{color:var(--text-light);font-size:.95rem}
+    .ft{background:var(--primary);color:var(--white);padding:3rem 0 1.5rem}
+    .fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;width:90%;max-width:1200px;margin:0 auto}
+    .fb .logo{color:var(--white);margin-bottom:1rem}
+    .ff h4{font-size:1rem;margin-bottom:1rem;text-transform:uppercase;letter-spacing:1px}
+    .ff a,.ff p{color:rgba(255,255,255,.8);text-decoration:none;display:block;margin-bottom:.5rem;font-size:.9rem}
+    .ff a:hover{color:var(--white)}
+    .fbot{text-align:center;padding-top:2rem;margin-top:2rem;border-top:1px solid rgba(255,255,255,.15);font-size:.85rem;color:rgba(255,255,255,.6)}
+    @media(max-width:868px){
+      .hm ul{display:none;flex-direction:column;background:var(--white);position:absolute;top:73px;left:0;width:100%;padding:1.5rem;box-shadow:0 8px 16px rgba(0,0,0,.1)}
+      .hm ul.open{display:flex}
+      .hm li{margin:.5rem 0}
+      .hb-burger{display:flex}
+    }
+  </style>
+</head>
+<body>
 <div class="tb"><div class="tb-in">
-  <div><span><i class="fa-solid fa-phone"></i> <span data-i18n="tel"></span></span>
-  <span style="margin-left:16px"><i class="fa-solid fa-envelope"></i> <span data-i18n="email"></span></span></div>
-  <div class="tb-r"><a href="#"><i class="fa-brands fa-linkedin"></i></a><a href="#"><i class="fa-brands fa-weixin"></i></a><button class="lb" id="langBtn">EN</button></div>
-</div>
-<nav class="primary"><div class="nav-in">
-  <a class="logo" href="index.html"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
-  <ul class="nl" id="menu">
+  <div class="tb-l"><span><i class="fa-solid fa-phone"></i> +86-21-XXXX-XXXX</span><span><i class="fa-solid fa-envelope"></i> bd@rolinbio.com</span></div>
+  <div class="tb-r"><button id="langBtn" class="lang-btn">EN</button></div>
+</div></div>
+<header class="hb"><div class="hb-in">
+  <a href="index.html" class="logo"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
+  <nav class="hm"><ul id="menu">
     <li><a href="index.html" data-i18n="m-home">首页</a></li>
     <li><a href="product.html" class="active" data-i18n="m-prod">主要产品</a></li>
     <li><a href="services.html" data-i18n="m-serv">服务项目</a></li>
-    <li><a href="resources.html" data-i18n="m-res">资料库</a></li>
+    <li><a href="library.html" data-i18n="m-lib">资料库</a></li>
     <li><a href="contact.html" data-i18n="m-contact">联系我们</a></li>
-  </ul>
-  <button class="burger" id="burger"><span></span><span></span><span></span></button>
-</div></nav>
-
-<section class="lm-s"><div class="lm-c">
-  <div class="st">
-    <p class="stag" data-i18n="p-tag">PRODUCT PORTFOLIO</p>
-    <h2 data-i18n="p-title">主要产品领域</h2>
-    <p data-i18n="p-lead">覆盖高值耗材、诊断设备、药品与手术系统，出口合规从源头设计。</p>
-  </div>
-  <div class="g3">
-    <div class="card"><div class="ci"><i class="fa-solid fa-heart"></i></div><h3 data-i18n="p1-t"></h3><p data-i18n="p1-d"></p></div>
-    <div class="card"><div class="ci"><i class="fa-solid fa-bone"></i></div><h3 data-i18n="p2-t"></h3><p data-i18n="p2-d"></p></div>
-    <div class="card"><div class="ci"><i class="fa-solid fa-eye"></i></div><h3 data-i18n="p3-t"></h3><p data-i18n="p3-d"></p></div>
-    <div class="card"><div class="ci"><i class="fa-solid fa-robot"></i></div><h3 data-i18n="p4-t"></h3><p data-i18n="p4-d"></p></div>
-    <div class="card"><div class="ci"><i class="fa-solid fa-procedures"></i></div><h3 data-i18n="p5-t"></h3><p data-i18n="p5-d"></p></div>
-    <div class="card"><div class="ci"><i class="fa-solid fa-bandage"></i></div><h3 data-i18n="p6-t"></h3><p data-i18n="p6-d"></p></div>
-  </div>
+  </ul></nav>
+  <button class="hb-burger" id="burgerBtn" aria-label="菜单"><span></span><span></span><span></span></button>
+</div></header>
+<section class="page-header"><div class="container">
+  <span class="tag" data-i18n="p-tag">PRODUCT PORTFOLIO</span>
+  <h1 data-i18n="p-title">主要产品领域</h1>
+  <p data-i18n="p-lead">覆盖高值耗材、诊断设备、药品与手术系统，出口合规从源头设计。</p>
 </div></section>
-
+<div class="container"><div class="products-grid">
+  <div class="card"><div class="icon"><i class="fa-solid fa-heart"></i></div><h3 data-i18n="p1-t">心脏高值耗材</h3><p data-i18n="p1-d">冠脉支架、心脏瓣膜、起搏器、封堵器等介入治疗核心产品，按目标国标准准备技术卷宗与标签体系。</p></div>
+  <div class="card"><div class="icon"><i class="fa-solid fa-bone"></i></div><h3 data-i18n="p2-t">骨科产品</h3><p data-i18n="p2-d">人工关节（髋/膝/肩）、脊柱内固定系统、创伤接骨板及髓内钉，生物相容性与疲劳测试文档完备。</p></div>
+  <div class="card"><div class="icon"><i class="fa-solid fa-eye"></i></div><h3 data-i18n="p3-t">眼科产品</h3><p data-i18n="p3-d">人工晶体、角膜接触镜、眼底诊断试剂，适配不同国家准入路径与临床证据要求。</p></div>
+  <div class="card"><div class="icon"><i class="fa-solid fa-robot"></i></div><h3 data-i18n="p4-t">腹腔手术机器人 & 能量平台</h3><p data-i18n="p4-d">多自由度机械臂系统、超声刀/高频电刀等，配套操作培训与售后技术文档体系。</p></div>
+  <div class="card"><div class="icon"><i class="fa-solid fa-procedures"></i></div><h3 data-i18n="p5-t">介入导管 & 导丝</h3><p data-i18n="p5-d">PTCA 球囊导管、造影导管、微导丝，适用于心血管及外周血管介入产品注册包。</p></div>
+  <div class="card"><div class="icon"><i class="fa-solid fa-bandage"></i></div><h3 data-i18n="p6-t">耗材 & 敷料</h3><p data-i18n="p6-d">无菌纱布、创口贴、手术缝合线、引流系统——大批量出口的稳定质量体系。</p></div>
+</div></div>
 <footer class="ft"><div class="fg">
-  <div class="fb"><a class="logo" href="index.html"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
-    <p style="font-size:.92rem;line-height:1.7;max-width:300px;margin-top:6px" data-i18n="f-desc"></p></div>
-  <div class="ff"><h4>导航</h4><a href="index.html" data-i18n="m-home">首页</a><a href="product.html" data-i18n="m-prod">主要产品</a><a href="services.html" data-i18n="m-serv">服务项目</a><a href="resources.html" data-i18n="m-res">资料库</a></div>
-  <div class="ff"><h4>联系</h4><p data-i18n="email"></p><p data-i18n="tel"></p></div>
+  <div class="fb"><a href="index.html" class="logo"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a><p data-i18n="f-desc">专注医疗器械与药品出海合规、注册代理与市场准入服务。</p></div>
+  <div class="ff"><h4 data-i18n="nav">导航</h4><a href="index.html" data-i18n="m-home">首页</a><a href="product.html" data-i18n="m-prod">主要产品</a><a href="services.html" data-i18n="m-serv">服务项目</a><a href="library.html" data-i18n="m-lib">资料库</a><a href="contact.html" data-i18n="m-contact">联系我们</a></div>
+  <div class="ff"><h4 data-i18n="contact">联系</h4><p data-i18n="contact-email">bd@rolinbio.com</p><p data-i18n="contact-tel">+86-21-XXXX-XXXX</p></div>
 </div><div class="fbot"><span>&copy; 2025 Rolin Bio. All rights reserved.</span></div></footer>
-<script src="js/lang.js"></script>
-</body></html>
+<script>
+const L={zh:{"site-title":"Rolin Bio | 主要产品","m-home":"首页","m-prod":"主要产品","m-serv":"服务项目","m-lib":"资料库","m-contact":"联系我们","p-tag":"PRODUCT PORTFOLIO","p-title":"主要产品领域","p-lead":"覆盖高值耗材、诊断设备、药品与手术系统，出口合规从源头设计。","p1-t":"心脏高值耗材","p1-d":"冠脉支架、心脏瓣膜、起搏器、封堵器等介入治疗核心产品，按目标国标准准备技术卷宗与标签体系。","p2-t":"骨科产品","p2-d":"人工关节（髋/膝/肩）、脊柱内固定系统、创伤接骨板及髓内钉，生物相容性与疲劳测试文档完备。","p3-t":"眼科产品","p3-d":"人工晶体、角膜接触镜、眼底诊断试剂，适配不同国家准入路径与临床证据要求。","p4-t":"腹腔手术机器人 & 能量平台","p4-d":"多自由度机械臂系统、超声刀/高频电刀等，配套操作培训与售后技术文档体系。","p5-t":"介入导管 & 导丝","p5-d":"PTCA 球囊导管、造影导管、微导丝，适用于心血管及外周血管介入产品注册包。","p6-t":"耗材 & 敷料","p6-d":"无菌纱布、创口贴、手术缝合线、引流系统——大批量出口的稳定质量体系。","nav":"导航","contact":"联系","contact-email":"bd@rolinbio.com","contact-tel":"+86-21-XXXX-XXXX","f-desc":"专注医疗器械与药品出海合规、注册代理与市场准入服务。"},
+en:{"site-title":"Rolin Bio | Products","m-home":"Home","m-prod":"Products","m-serv":"Services","m-lib":"Resources","m-contact":"Contact","p-tag":"PRODUCT PORTFOLIO","p-title":"Core Product Areas","p-lead":"Covering high-value devices, diagnostics, pharma and surgical systems — with export compliance built in from day one.","p1-t":"Cardiac High-Value Consumables","p1-d":"PTCA/stents, heart valves, pacemakers, occluders — prepare technical files & labeling per target market standards.","p2-t":"Orthopedic Products","p2-d":"Joint arthroplasty (hip/knee/shoulder), spinal fixation, trauma plating/nails — full biocompatibility & fatigue test dossier support.","p3-t":"Ophthalmic Products","p3-d":"IOLs, contact lenses, retinal diagnostic kits — adapted to different countries' evidence requirements.","p4-t":"Laparoscopic Robots & Energy Platforms","p4-d":"Multi-DOF manipulators, ultrasonic scalpels/ESUs — with operator training & after-sales tech-documentation.","p5-t":"Interventional Catheters & Guidewires","p5-d":"PTCA balloon catheters, diagnostic catheters, microwires — integrated into cardiovascular & peripheral intervention registration packages.","p6-t":"Consumables & Dressings","p6-d":"Sterile gauze, wound dressings, sutures, drains — stable quality system for high-volume export.","nav":"Navigation","contact":"Contact","contact-email":"bd@rolinbio.com","contact-tel":"+86-21-XXXX-XXXX","f-desc":"Specializing in medtech & pharma export compliance, registration agency and market access services."}};
+let currentLang='zh';function renderLang(lang){const t=L[lang]||L.zh;document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.getAttribute('data-i18n');if
