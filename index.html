@@ -1,83 +1,263 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rolin Bio | 医药器械出海专家</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title id="page-title">Rolin Bio | 医疗器械与药品出海专家</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <i class="fas fa-dna"></i> Rolin Bio
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">首页</a></li>
-                <li><a href="product.html">主要产品</a></li>
-                <li><a href="services.html">服务项目</a></li>
-                <li><a href="contact.html">联系我们</a></li>
-            </ul>
-            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-        </div>
-    </nav>
 
-    <!-- Hero 区域 -->
-    <header class="hero">
-        <div class="container">
-            <h1>专注医疗器械与药品<br>一站式出海解决方案</h1>
-            <p>海外产品注册代理 · 法规咨询 · 市场准入 · 贸易落地</p>
-            <a href="contact.html" class="btn-primary">立即咨询</a>
-        </div>
-    </header>
+<!-- ===== NAV ===== -->
+<nav class="nb-nav">
+  <div class="nb-ct">
+    <a class="nb-logo" href="index.html">
+      <span class="nb-logo-icon">R</span> Rolin Bio
+    </a>
 
-    <!-- 公司简介 -->
-    <section class="about">
-        <div class="container">
-            <h2 class="section-title">关于我们</h2>
-            <p>Rolin Bio 是一家专注于为医疗器械和药品企业提供国际化服务的专业机构。我们深耕海外市场，熟悉东南亚、中东非洲、独联体等地区的药政法规体系，为客户提供产品出口贸易、海外注册代理、法规合规咨询及持证服务。帮助中国企业高效、合规地进入全球市场。</p>
-        </div>
-    </section>
+    <ul class="nb-menu">
+      <li><a href="index.html" class="active" data-i18n="nav-home">首页</a></li>
+      <li><a href="product.html" data-i18n="nav-products">主要产品</a></li>
+      <li><a href="services.html" data-i18n="nav-services">服务项目</a></li>
+      <li><a href="contact.html" data-i18n="nav-contact">联系我们</a></li>
+    </ul>
 
-    <!-- 核心优势 -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">核心优势</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <i class="fas fa-globe"></i>
-                    <h3>全球视野</h3>
-                    <p>深入理解东南亚、中东非、独联体等区域药政法规</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-file-contract"></i>
-                    <h3>注册代理</h3>
-                    <p>高效完成海外产品注册、许可证办理及持证管理</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-handshake"></i>
-                    <h3>贸易落地</h3>
-                    <p>从市场调研到渠道对接，全程陪伴式出海服务</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="nb-lang-switch">
+      <button id="lang-btn" class="nb-lang-btn">EN</button>
+    </div>
 
-    <!-- 页脚 -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Rolin Bio. All rights reserved.</p>
-            <p>Email: bd@rolinbio.com</p>
-        </div>
-    </footer>
+    <a class="nb-cta" href="contact.html" data-i18n="nav-cta">BD 咨询</a>
+    <button class="nb-burger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </div>
+</nav>
 
-    <script>
-        // 移动端菜单切换
-        document.querySelector('.menu-toggle').addEventListener('click', function(){
-            document.querySelector('.nav-links').classList.toggle('show');
-        });
-    </script>
+<!-- ===== HERO ===== -->
+<header class="nb-hero">
+  <div class="nb-hero-bg">
+    <div class="nb-hero-circle c1"></div>
+    <div class="nb-hero-circle c2"></div>
+  </div>
+
+  <div class="nb-ct nb-hero-inner">
+    <p class="nb-hero-tag" data-i18n="hero-tag">医药 &amp; 器械 · 出海合规与准入</p>
+    <h1 class="nb-hero-h1" data-i18n="hero-h1">
+      让中国医疗产品<br><span class="nb-hero-h1-accent">合规进入全球市场</span>
+    </h1>
+    <p class="nb-hero-sub" data-i18n="hero-sub">
+      Rolin Bio 专注医疗器械与药品的海外产品注册代理、法规持证、贸易落地与市场准入——
+      熟悉东南亚、中东非、独联体等区域药政体系，把“能出口”变成“能持续卖”。
+    </p>
+
+    <div class="nb-hero-actions">
+      <a href="services.html" class="nb-btn nb-btn-white" data-i18n="hero-btn1">我们的服务</a>
+      <a href="contact.html" class="nb-btn nb-btn-outline" data-i18n="hero-btn2">对接 BD 团队</a>
+    </div>
+
+    <div class="nb-hero-kpis">
+      <div><strong data-i18n="kpi1-num">15+</strong><span data-i18n="kpi1-label">国家/地区准入经验</span></div>
+      <div><strong data-i18n="kpi2-num">200+</strong><span data-i18n="kpi2-label">项目注册参与</span></div>
+      <div><strong data-i18n="kpi3-num">SEA / MENA / CIS</strong><span data-i18n="kpi3-label">重点覆盖区域</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 模块A：核心服务 ===== -->
+<section class="nb-section nb-section--white">
+  <div class="nb-ct">
+    <p class="nb-section-tag" data-i18n="core-tag">核心能力</p>
+    <h2 class="nb-section-h2" data-i18n="core-title">我们做什么</h2>
+    <p class="nb-section-lead" data-i18n="core-lead">
+      从“注册资料”到“持证上市”，再到渠道落地，Rolin Bio 提供面向海外的端到端合规交付。
+    </p>
+
+    <div class="nb-grid3">
+      <div class="nb-card">
+        <div class="nb-card-icon">📜</div>
+        <h3 data-i18n="card1-title">海外产品注册代理</h3>
+        <p data-i18n="card1-desc">
+          代理完成目标国注册申报（AR/PP，依区域体系），整理技术卷宗与本地化标签要求，
+          跟进审评沟通与证书续期，降低拒收与补正风险。
+        </p>
+      </div>
+      <div class="nb-card">
+        <div class="nb-card-icon">🛡️</div>
+        <h3 data-i18n="card2-title">法规合规 &amp; 持证（MAH/持证代表）</h3>
+        <p data-i18n="card2-desc">
+          搭建符合当地监管预期的合规框架；必要时提供持证/授权代表与上市后监管支持
+          （PV、投诉处置、年度更新），让“持证”可持续。
+        </p>
+      </div>
+      <div class="nb-card">
+        <div class="nb-card-icon">🌍</div>
+        <h3 data-i18n="card3-title">市场通路 &amp; 贸易落地</h3>
+        <p data-i18n="card3-desc">
+          结合目标国招标/医保/分销规则，匹配可信进口商与渠道伙伴；
+          同步解决出口单证、冷链/包装标识、关务合规与售后追溯链路。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 模块B：区域覆盖 ===== -->
+<section class="nb-section nb-section--smoke">
+  <div class="nb-ct">
+    <p class="nb-section-tag" data-i18n="region-tag">区域专长</p>
+    <h2 class="nb-section-h2" data-i18n="region-title">重点覆盖区域</h2>
+
+    <div class="nb-tags">
+      <span data-i18n="region-1">东盟（泰国 / 印尼 / 越南 / 菲律宾 / 马来西亚…）</span>
+      <span data-i18n="region-2">中东非（沙特 / UAE / 埃及 / 肯尼亚 / 摩洛哥…）</span>
+      <span data-i18n="region-3">独联体（俄罗斯 / 哈萨克斯坦 / 乌兹别克斯坦 / 白俄…）</span>
+      <span data-i18n="region-4">欧盟路径咨询（CE / MDR 对标梳理）</span>
+      <span data-i18n="region-5">美国路径咨询（FDA 对标 / 代理咨询）</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 模块C：合作对接 ===== -->
+<section class="nb-section nb-section--white">
+  <div class="nb-ct nb-ct--narrow">
+    <p class="nb-section-tag" data-i18n="contact-tag">合作对接</p>
+    <h2 class="nb-section-h2" data-i18n="contact-title">需要评估产品出海可行性？</h2>
+    <p class="nb-section-lead" data-i18n="contact-lead">
+      发产品基本信息（品名/分类/预期市场/现有证书）到 <strong>bd@rolinbio.com</strong>，
+      我们会在 1–2 个工作日内回复初步准入路径与所需材料清单。
+    </p>
+    <a href="contact.html" class="nb-btn nb-btn-blue" data-i18n="contact-btn">写需求给 BD 团队</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="nb-footer">
+  <div class="nb-ct nb-footer-inner">
+    <div class="nb-footer-brand">
+      <div class="nb-logo"><span class="nb-logo-icon">R</span> Rolin Bio</div>
+      <p>bd@rolinbio.com</p>
+    </div>
+    <div class="nb-footer-links">
+      <a href="index.html" data-i18n="nav-home">首页</a>
+      <a href="product.html" data-i18n="nav-products">主要产品</a>
+      <a href="services.html" data-i18n="nav-services">服务项目</a>
+      <a href="contact.html" data-i18n="nav-contact">联系我们</a>
+    </div>
+    <p class="nb-footer-copy">&copy; 2025 Rolin Bio. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// ===== 语言包 =====
+const translations = {
+  'zh': {
+    'page-title': 'Rolin Bio | 医疗器械与药品出海专家',
+    'nav-home': '首页',
+    'nav-products': '主要产品',
+    'nav-services': '服务项目',
+    'nav-contact': '联系我们',
+    'nav-cta': 'BD 咨询',
+    'hero-tag': '医药 & 器械 · 出海合规与准入',
+    'hero-h1': '让中国医疗产品<br><span class="nb-hero-h1-accent">合规进入全球市场</span>',
+    'hero-sub': 'Rolin Bio 专注医疗器械与药品的海外产品注册代理、法规持证、贸易落地与市场准入——熟悉东南亚、中东非、独联体等区域药政体系，把“能出口”变成“能持续卖”。',
+    'hero-btn1': '我们的服务',
+    'hero-btn2': '对接 BD 团队',
+    'kpi1-num': '15+',
+    'kpi1-label': '国家/地区准入经验',
+    'kpi2-num': '200+',
+    'kpi2-label': '项目注册参与',
+    'kpi3-num': 'SEA / MENA / CIS',
+    'kpi3-label': '重点覆盖区域',
+    'core-tag': '核心能力',
+    'core-title': '我们做什么',
+    'core-lead': '从“注册资料”到“持证上市”，再到渠道落地，Rolin Bio 提供面向海外的端到端合规交付。',
+    'card1-title': '海外产品注册代理',
+    'card1-desc': '代理完成目标国注册申报（AR/PP，依区域体系），整理技术卷宗与本地化标签要求，跟进审评沟通与证书续期，降低拒收与补正风险。',
+    'card2-title': '法规合规 & 持证（MAH/持证代表）',
+    'card2-desc': '搭建符合当地监管预期的合规框架；必要时提供持证/授权代表与上市后监管支持（PV、投诉处置、年度更新），让“持证”可持续。',
+    'card3-title': '市场通路 & 贸易落地',
+    'card3-desc': '结合目标国招标/医保/分销规则，匹配可信进口商与渠道伙伴；同步解决出口单证、冷链/包装标识、关务合规与售后追溯链路。',
+    'region-tag': '区域专长',
+    'region-title': '重点覆盖区域',
+    'region-1': '东盟（泰国 / 印尼 / 越南 / 菲律宾 / 马来西亚…）',
+    'region-2': '中东非（沙特 / UAE / 埃及 / 肯尼亚 / 摩洛哥…）',
+    'region-3': '独联体（俄罗斯 / 哈萨克斯坦 / 乌兹别克斯坦 / 白俄…）',
+    'region-4': '欧盟路径咨询（CE / MDR 对标梳理）',
+    'region-5': '美国路径咨询（FDA 对标 / 代理咨询）',
+    'contact-tag': '合作对接',
+    'contact-title': '需要评估产品出海可行性？',
+    'contact-lead': '发产品基本信息（品名/分类/预期市场/现有证书）到 <strong>bd@rolinbio.com</strong>，我们会在 1–2 个工作日内回复初步准入路径与所需材料清单。',
+    'contact-btn': '写需求给 BD 团队',
+  },
+  'en': {
+    'page-title': 'Rolin Bio | MedTech & Pharma Global Access Expert',
+    'nav-home': 'Home',
+    'nav-products': 'Products',
+    'nav-services': 'Services',
+    'nav-contact': 'Contact',
+    'nav-cta': 'BD Inquiry',
+    'hero-tag': 'MedTech & Pharma · Regulatory & Market Access',
+    'hero-h1': 'Bring Chinese Medical Products<br><span class="nb-hero-h1-accent">Compliantly to Global Markets</span>',
+    'hero-sub': 'Rolin Bio specializes in overseas product registration, regulatory holding, trade execution and market access for medical devices and pharmaceuticals — with deep knowledge of Southeast Asia, MENA, CIS regions.',
+    'hero-btn1': 'Our Services',
+    'hero-btn2': 'Talk to BD Team',
+    'kpi1-num': '15+',
+    'kpi1-label': 'Countries Covered',
+    'kpi2-num': '200+',
+    'kpi2-label': 'Projects Involved',
+    'kpi3-num': 'SEA / MENA / CIS',
+    'kpi3-label': 'Key Regions',
+    'core-tag': 'Core Capabilities',
+    'core-title': 'What We Do',
+    'core-lead': 'From dossier preparation to marketing authorization and channel landing, Rolin Bio delivers end-to-end compliance solutions for overseas markets.',
+    'card1-title': 'Product Registration Agent',
+    'card1-desc': 'Handle target country registration submissions (AR/PP per local framework), compile technical dossiers and localized labeling, follow up review communication and certificate renewal.',
+    'card2-title': 'Regulatory Compliance & MAH',
+    'card2-desc': 'Establish compliant frameworks aligned with local regulations; provide MAH/authorized representative services and post-market support (PV, complaint handling, annual updates).',
+    'card3-title': 'Market Access & Trade Execution',
+    'card3-desc': 'Match reliable importers and channel partners based on tendering, reimbursement and distribution rules; solve export documentation, cold chain, labeling and traceability.',
+    'region-tag': 'Regional Expertise',
+    'region-title': 'Key Coverage Areas',
+    'region-1': 'ASEAN (Thailand / Indonesia / Vietnam / Philippines / Malaysia…)',
+    'region-2': 'MENA (Saudi Arabia / UAE / Egypt / Kenya / Morocco…)',
+    'region-3': 'CIS (Russia / Kazakhstan / Uzbekistan / Belarus…)',
+    'region-4': 'EU Pathway Advisory (CE / MDR alignment)',
+    'region-5': 'US Pathway Advisory (FDA alignment / agent consultation)',
+    'contact-tag': 'Get in Touch',
+    'contact-title': 'Need to Assess Your Product Feasibility?',
+    'contact-lead': 'Send product basic info (name / category / target markets / existing certificates) to <strong>bd@rolinbio.com</strong>, we will reply within 1–2 business days with preliminary pathway and checklist.',
+    'contact-btn': 'Submit Request to BD Team',
+  }
+};
+
+let currentLang = 'zh';
+
+function applyLanguage(lang) {
+  const texts = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (texts[key]) {
+      el.innerHTML = texts[key];
+    }
+  });
+  document.getElementById('lang-btn').textContent = lang === 'zh' ? 'EN' : '中文';
+  document.documentElement.lang = lang;
+  currentLang = lang;
+}
+
+document.getElementById('lang-btn').addEventListener('click', function() {
+  const nextLang = currentLang === 'zh' ? 'en' : 'zh';
+  applyLanguage(nextLang);
+});
+
+// 初始化中文
+applyLanguage('zh');
+
+// 移动端菜单
+document.querySelector('.nb-burger')?.addEventListener('click', () => {
+  document.querySelector('.nb-menu')?.classList.toggle('open');
+});
+</script>
 </body>
 </html>
