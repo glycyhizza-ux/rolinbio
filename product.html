@@ -1,83 +1,164 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>主要产品 - Rolin Bio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <i class="fas fa-dna"></i> Rolin Bio
+<!-- 顶部通栏 -->
+<header class="nb-topbar">
+    <div class="nb-topbar-inner">
+        <div class="nb-topbar-left">
+            <i class="fa-solid fa-phone"></i> +86-20-8911-9292
+            <i class="fa-solid fa-envelope"></i> info@rolinbio.com
+        </div>
+        <div class="nb-topbar-right">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <button class="nb-lang-switch">
+                <span class="nb-lang-btn" id="lang-btn">EN</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- 主导航 -->
+<nav class="nb-navbar">
+    <div class="nb-navbar-inner">
+        <a href="index.html" class="nb-logo">
+            <i class="fa-solid fa-dna"></i> Rolin<span>Bio</span>
+        </a>
+        <ul class="nb-menu" id="main-menu">
+            <li><a href="index.html" data-i18n="nav-home">首页</a></li>
+            <li><a href="product.html" data-i18n="nav-product">主要产品</a></li>
+            <li><a href="services.html" data-i18n="nav-services">服务项目</a></li>
+            <li><a href="contact.html" data-i18n="nav-contact">联系我们</a></li>
+        </ul>
+        <div class="nb-burger" id="mobile-menu-btn">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- 主内容区 -->
+<main>
+    <!-- Hero 区域 -->
+    <section class="nb-hero">
+        <div class="nb-hero-inner">
+            <div class="nb-hero-text">
+                <h1 data-i18n="hero-title">赋能精准医疗，守护生命健康</h1>
+                <p data-i18n="hero-lead">Rolin Bio 是一家立足中国、面向全球的医疗产品供应商。我们专注于高品质医疗器械与药品的研发与分销，致力于为全球客户提供合规、可靠的一站式解决方案。
+                <div class="nb-hero-btns">
+                    <a href="product.html" class="nb-btn nb-btn-primary" data-i18n="hero-btn1">探索产品</a>
+                    <a href="contact.html" class="nb-btn nb-btn-secondary" data-i18n="hero-btn2">商务合作</a>
+                </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="product.html" class="active">主要产品</a></li>
-                <li><a href="services.html">服务项目</a></li>
-                <li><a href="contact.html">联系我们</a></li>
-            </ul>
-            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-        </div>
-    </nav>
-
-    <section class="page-hero">
-        <div class="container">
-            <h1>主要产品</h1>
-            <p>涵盖医疗器械与药品两大领域，满足全球市场需求</p>
-        </div>
-    </section>
-
-    <section class="products">
-        <div class="container">
-            <div class="product-list">
-                <div class="product-card">
-                    <i class="fas fa-syringe"></i>
-                    <h3>注射器 & 输液器</h3>
-                    <p>高品质一次性医用耗材，符合 ISO 13485 标准</p>
-                </div>
-                <div class="product-card">
-                    <i class="fas fa-heartbeat"></i>
-                    <h3>监护仪 & 诊断设备</h3>
-                    <p>多参数监护仪、血压计、血糖仪等家用及临床设备</p>
-                </div>
-                <div class="product-card">
-                    <i class="fas fa-pills"></i>
-                    <h3>抗生素 & 常用药品</h3>
-                    <p>通过 WHO-GMP 认证的原料药及制剂</p>
-                </div>
-                <div class="product-card">
-                    <i class="fas fa-band-aid"></i>
-                    <h3>手术耗材 & 敷料</h3>
-                    <p>无菌纱布、创口贴、手术缝合线等</p>
-                </div>
-                <div class="product-card">
-                    <i class="fas fa-microscope"></i>
-                    <h3>体外诊断试剂</h3>
-                    <p>传染病检测、肿瘤标志物等快速诊断试剂</p>
-                </div>
-                <div class="product-card">
-                    <i class="fas fa-lungs"></i>
-                    <h3>呼吸机 & 麻醉机</h3>
-                    <p>急救与手术室必备设备，CE/MDR 认证</p>
-                </div>
+            <div class="nb-hero-visual">
+                <!-- 这里用 CSS 画一个抽象的医学图形占位 -->
+                <div class="nb-hero-graphic"></div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Rolin Bio. All rights reserved.</p>
-            <p>Email: bd@rolinbio.com</p>
+    <!-- 信任背书 -->
+    <section class="nb-trust">
+        <div class="nb-container">
+            <div class="nb-trust-text" data-i18n="trust-text">Trusted by leading healthcare providers worldwide</div>
+            <div class="nb-trust-logos">
+                <span class="nb-logo-text">ISO</span>
+                <span class="nb-logo-text">WHO-GMP</span>
+                <span class="nb-logo-text">FDA</span>
+                <span class="nb-logo-text">CE</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品分类 -->
+    <section class="nb-section">
+        <div class="nb-container">
+            <div class="nb-section-header">
+                <h2 class="nb-section-h2" data-i18n="product-title">核心产品领域</h2>
+                <p class="nb-section-lead" data-i18n="product-lead">涵盖医疗器械与药品两大领域，满足全球市场需求
+            </div>
+            <div class="nb-grid3">
+                <div class="nb-card">
+                    <div class="nb-card-icon"><i class="fa-solid fa-syringe"></i></div>
+                    <h3 data-i18n="p1-title">注射器 & 输液器</h3>
+                    <p data-i18n="p1-desc">高品质一次性医用耗材，符合 ISO 13485 标准
+                </div>
+                <div class="nb-card">
+                    <div class="nb-card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3 data-i18n="p2-title">监护仪 & 诊断设备</h3>
+                    <p data-i18n="p2-desc">多参数监护仪、血压计、血糖仪等家用及临床设备
+                </div>
+                <div class="nb-card">
+                    <div class="nb-card-icon"><i class="fa-solid fa-pills"></i></div>
+                    <h3 data-i18n="p3-title">抗生素 & 常用药品</h3>
+                    <p data-i18n="p3-desc">通过 WHO-GMP 认证的原料药及制剂
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="nb-footer">
+        <div class="nb-footer-inner">
+            <div class="nb-footer-brand">
+                <a href="index.html" class="nb-logo"><i class="fa-solid fa-dna"></i> Rolin<span>Bio</span></a>
+                <p data-i18n="footer-text">专业的医疗产品供应商，让优质的医疗技术触手可及。
+            </div>
+            <div class="nb-footer-links">
+                <a href="index.html" data-i18n="nav-home">首页</a>
+                <a href="product.html" data-i18n="nav-product">主要产品</a>
+                <a href="services.html" data-i18n="nav-services">服务项目</a>
+                <a href="contact.html" data-i18n="nav-contact">联系我们</a>
+            </div>
+            <div class="nb-footer-copy">
+                &copy; 2024 Rolin Bio. All Rights Reserved.
+            </div>
         </div>
     </footer>
+</main>
 
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function(){
-            document.querySelector('.nav-links').classList.toggle('show');
+<script>
+    // 简单语言切换逻辑
+    const translations = {
+        'zh': {
+            'nav-home': '首页', 'nav-product': '主要产品', 'nav-services': '服务项目', 'nav-contact': '联系我们',
+            'hero-title': '赋能精准医疗，守护生命健康',
+            'hero-lead': 'Rolin Bio 是一家立足中国、面向全球的医疗产品供应商。我们专注于高品质医疗器械与药品的研发与分销，致力于为全球客户提供合规、可靠的一站式解决方案。',
+            'hero-btn1': '探索产品', 'hero-btn2': '商务合作',
+            'trust-text': 'Trusted by leading healthcare providers worldwide',
+            'product-title': '核心产品领域', 'product-lead': '涵盖医疗器械与药品两大领域，满足全球市场需求',
+            'p1-title': '注射器 & 输液器', 'p1-desc': '高品质一次性医用耗材，符合 ISO 13485 标准',
+            'p2-title': '监护仪 & 诊断设备', 'p2-desc': '多参数监护仪、血压计、血糖仪等家用及临床设备',
+            'p3-title': '抗生素 & 常用药品', 'p3-desc': '通过 WHO-GMP 认证的原料药及制剂',
+            'footer-text': '专业的医疗产品供应商，让优质的医疗技术触手可及。'
+        },
+        'en': {
+            'nav-home': 'Home', 'nav-product': 'Products', 'nav-services': 'Services', 'nav-contact': 'Contact',
+            'hero-title': 'Empowering Precision Medicine',
+            'hero-lead': 'Rolin Bio provides high-quality medical devices and pharmaceuticals worldwide. We are committed to offering compliant and reliable solutions.',
+            'hero-btn1': 'Explore Products', 'hero-btn2': 'Work With Us',
+            'trust-text': 'Trusted by leading healthcare providers worldwide',
+            'product-title': 'Core Product Areas',
+            'product-lead': 'Covering medical devices and pharmaceuticals to meet global market demands.',
+            'p1-title': 'Syringes & Infusion Sets', 'p1-desc': 'High-quality disposable medical consumables, ISO 13485 certified.',
+            'p2-title': 'Monitors & Diagnostic Devices', 'p2-desc': 'Multi-parameter monitors, blood pressure monitors, glucometers, etc.',
+            'p3-title': 'Antibiotics & Pharmaceuticals', 'p3-desc': 'APIs and formulations certified by WHO-GMP.',
+            'footer-text': 'A professional medical supplier dedicated to making quality healthcare accessible.'
+        }
+    };
+    
+    let currentLang = 'zh';
+    function applyLanguage(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang][key]) el.innerHTML = translations[lang][key];
         });
-    </script>
-</body>
-</html>
+        document.getElementById('lang-btn').textContent = lang === 'zh' ? 'EN' : '中文';
+    }
+    document.getElementById('lang-btn').addEventListener('click', () => {
+        currentLang = currentLang === 'zh' ? 'en' : 'zh';
+        applyLanguage(currentLang);
+    });
+    
+    // 汉堡菜单
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+        document.getElementById('main-menu').classList.toggle('open');
+    });
+</script>
