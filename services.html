@@ -1,113 +1,94 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title data-i18n="site-title">Rolin Bio | 服务项目</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rolin Bio | 服务项目</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:#1e293b;background:#fff}
+    :root{--primary:#5E2A84;--primary-dark:#4A2169;--primary-light:#F3EFF7;--text-dark:#1e293b;--text-light:#64748b;--white:#fff;--border:#e2e8f0}
+    .container{width:90%;max-width:1200px;margin:0 auto;padding:0 15px}
+    .tag{display:inline-block;font-size:.875rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--primary);margin-bottom:.5rem}
+    .btn{display:inline-block;padding:.75rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;cursor:pointer;transition:all .3s ease;border:none}
+    .btn-primary{background:var(--primary);color:var(--white)}.btn-primary:hover{background:var(--primary-dark)}
+    .tb{background:var(--primary);color:var(--white);padding:.5rem 0}
+    .tb-in{display:flex;justify-content:space-between;align-items:center;width:90%;max-width:1200px;margin:0 auto}
+    .tb-l span{margin-right:1.5rem;font-size:.875rem}
+    .tb-r .lang-btn{background:var(--primary-dark);color:var(--white);border:none;padding:.3rem .8rem;border-radius:4px;cursor:pointer;font-size:.875rem}
+    .hb{background:var(--white);box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top:0;z-index:100}
+    .hb-in{display:flex;justify-content:space-between;align-items:center;width:90%;max-width:1200px;margin:0 auto;padding:1rem 0}
+    .logo{display:flex;align-items:center;text-decoration:none;font-size:1.5rem;font-weight:700;color:var(--primary)}
+    .logo .ico{width:40px;height:40px;margin-right:.5rem;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.2rem}
+    .hm ul{display:flex;list-style:none}
+    .hm li{margin-left:2rem}
+    .hm a{text-decoration:none;color:var(--text-dark);font-weight:500;transition:color .3s}
+    .hm a:hover,.hm a.active{color:var(--primary)}
+    .hb-burger{display:none;flex-direction:column;justify-content:space-around;width:30px;height:25px;background:transparent;border:none;cursor:pointer}
+    .hb-burger span{display:block;height:3px;width:100%;background:var(--text-dark);border-radius:3px}
+    .page-header{padding:4rem 0 2rem;background:var(--primary-light);text-align:center}
+    .page-header h1{font-size:2.8rem;color:var(--text-dark);margin-bottom:.5rem}
+    .page-header p{color:var(--text-light);font-size:1.1rem;max-width:600px;margin:0 auto}
+    .services-list{display:flex;flex-direction:column;gap:1.5rem;padding:3rem 0;max-width:900px;margin:0 auto}
+    .service-item{display:flex;gap:1.5rem;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.8rem;align-items:flex-start;transition:box-shadow .3s}
+    .service-item:hover{box-shadow:0 8px 20px rgba(0,0,0,.06)}
+    .service-item .icon{font-size:2rem;color:var(--primary);min-width:50px;text-align:center}
+    .service-item h3{font-size:1.3rem;color:var(--text-dark);margin-bottom:.5rem}
+    .service-item p{color:var(--text-light);font-size:.95rem;line-height:1.7}
+    .ft{background:var(--primary);color:var(--white);padding:3rem 0 1.5rem}
+    .fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;width:90%;max-width:1200px;margin:0 auto}
+    .fb .logo{color:var(--white);margin-bottom:1rem}
+    .ff h4{font-size:1rem;margin-bottom:1rem;text-transform:uppercase;letter-spacing:1px}
+    .ff a,.ff p{color:rgba(255,255,255,.8);text-decoration:none;display:block;margin-bottom:.5rem;font-size:.9rem}
+    .ff a:hover{color:var(--white)}
+    .fbot{text-align:center;padding-top:2rem;margin-top:2rem;border-top:1px solid rgba(255,255,255,.15);font-size:.85rem;color:rgba(255,255,255,.6)}
+    @media(max-width:868px){
+      .hm ul{display:none;flex-direction:column;background:var(--white);position:absolute;top:73px;left:0;width:100%;padding:1.5rem;box-shadow:0 8px 16px rgba(0,0,0,.1)}
+      .hm ul.open{display:flex}
+      .hm li{margin:.5rem 0}
+      .hb-burger{display:flex}
+      .service-item{flex-direction:column;text-align:center}
+    }
+  </style>
 </head>
 <body>
-
-    <!-- 顶部通栏 -->
-    <div class="tb"><div class="tb-in">
-        <div class="tb-l"><span><i class="fa-solid fa-phone"></i> <span data-i18n="contact-tel"></span></span></div>
-        <div class="tb-r"><span><i class="fa-solid fa-envelope"></i> <span data-i18n="contact-email"></span></span></div>
-    </div></div>
-
-    <!-- 主导航栏 -->
-    <header class="hb"><div class="hb-in">
-        <a class="logo" href="index.html"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
-        <nav class="hm">
-            <ul>
-                <li><a href="index.html" data-i18n="m-home">首页</a></li>
-                <li><a href="product.html" data-i18n="m-prod">主要产品</a></li>
-                <li><a href="services.html" class="active" data-i18n="m-serv">服务项目</a></li>
-                <li><a href="library.html" data-i18n="m-lib">资料库</a></li>
-                <li><a href="contact.html" data-i18n="m-contact">联系我们</a></li>
-            </ul>
-        </nav>
-        <div class="hb-r">
-            <button class="hb-lang nb-lang-switch"><span id="langBtn" class="nb-lang-btn">EN</span></button>
-            <div class="hb-burger"><span></span><span></span><span></span></div>
-        </div>
-    </div></header>
-
-    <!-- 主内容区 -->
-    <main class="pg">
-        <div class="pg-bd">
-            <!-- 页面标题 -->
-            <div class="pg-h">
-                <p class="stag" data-i18n="s-tag">SERVICES</p>
-                <h1 data-i18n="s-title">服务项目</h1>
-                <p data-i18n="s-lead">从第一份注册策略报告，到持证上市后的每年续证与不良事件上报——全程可审计、可追溯。</p>
-            </div>
-
-            <!-- 服务列表（使用 spc 样式） -->
-            <div class="spc">
-                <div class="sp">
-                    <div class="spd"></div>
-                    <div>
-                        <h4 data-i18n="s1-t">海外注册代理（RA）</h4>
-                        <p data-i18n="s1-d">目标国 RA 委任 / 本地代理人备案；协助完成 AR 卷宗整理、审评问答、现场/远程核查应对与证书签发跟踪。</p>
-                    </div>
-                </div>
-                <div class="sp">
-                    <div class="spd"></div>
-                    <div>
-                        <h4 data-i18n="s2-t">法规策略 & 合规体系</h4>
-                        <p data-i18n="s2-d">按产品分类（MD/IVD/Drug）输出国别准入路线图；搭建本地化标签、IFU、风险管理文件（ISO 14971）与技术文档结构。</p>
-                    </div>
-                </div>
-                <div class="sp">
-                    <div class="spd"></div>
-                    <div>
-                        <h4 data-i18n="s3-t">持证 & 上市后监管（PMS/PV）</h4>
-                        <p data-i18n="s3-d">提供 MAH/持证代表服务；建立投诉记录、不良事件上报、趋势分析、CAPA 追踪与年度更新日历。</p>
-                    </div>
-                </div>
-                <div class="sp">
-                    <div class="spd"></div>
-                    <div>
-                        <h4 data-i18n="s4-t">贸易落地 & 渠道对接</h4>
-                        <p data-i18n="s4-d">出口许可证、原产地证、报关单证与冷链/防湿/防磁包装方案；匹配进口商资质审查与经销协议框架。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- 页脚 -->
-    <footer class="ft">
-        <div class="fg">
-            <div class="fb">
-                <a class="logo" href="index.html"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
-                <p style="font-size:.92rem;line-height:1.7;max-width:300px;margin-top:6px" data-i18n="f-desc">专注医疗器械与药品出海合规、注册代理与市场准入服务。</p>
-            </div>
-            <div class="ff">
-                <h4 data-i18n="nav">导航</h4>
-                <a href="index.html" data-i18n="m-home">首页</a>
-                <a href="product.html" data-i18n="m-prod">主要产品</a>
-                <a href="services.html" data-i18n="m-serv">服务项目</a>
-                <a href="library.html" data-i18n="m-lib">资料库</a>
-            </div>
-            <div class="ff">
-                <h4 data-i18n="contact">联系</h4>
-                <p data-i18n="contact-email">bd@rolinbio.com</p>
-                <p data-i18n="contact-tel">+86-21-XXXX-XXXX</p>
-            </div>
-        </div>
-        <div class="fbot">
-            <span>&copy; 2025 Rolin Bio. All rights reserved.</span>
-        </div>
-    </footer>
-
-    <script src="js/lang.js"></script>
-    <script>
-        // 移动端菜单
-        document.querySelector('.hb-burger')?.addEventListener('click', () => {
-            document.querySelector('.hm')?.classList.toggle('open');
-        });
-    </script>
+<div class="tb"><div class="tb-in">
+  <div class="tb-l"><span><i class="fa-solid fa-phone"></i> +86-21-XXXX-XXXX</span><span><i class="fa-solid fa-envelope"></i> bd@rolinbio.com</span></div>
+  <div class="tb-r"><button id="langBtn" class="lang-btn">EN</button></div>
+</div></div>
+<header class="hb"><div class="hb-in">
+  <a href="index.html" class="logo"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
+  <nav class="hm"><ul id="menu">
+    <li><a href="index.html" data-i18n="m-home">首页</a></li>
+    <li><a href="product.html" data-i18n="m-prod">主要产品</a></li>
+    <li><a href="services.html" class="active" data-i18n="m-serv">服务项目</a></li>
+    <li><a href="library.html" data-i18n="m-lib">资料库</a></li>
+    <li><a href="contact.html" data-i18n="m-contact">联系我们</a></li>
+  </ul></nav>
+  <button class="hb-burger" id="burgerBtn" aria-label="菜单"><span></span><span></span><span></span></button>
+</div></header>
+<section class="page-header"><div class="container">
+  <span class="tag" data-i18n="s-tag">SERVICES</span>
+  <h1 data-i18n="s-title">服务项目</h1>
+  <p data-i18n="s-lead">从第一份注册策略报告，到持证上市后的每年续证与不良事件上报——全程可审计、可追溯。</p>
+</div></section>
+<div class="container"><div class="services-list">
+  <div class="service-item"><div class="icon"><i class="fa-solid fa-file-signature"></i></div><div><h3 data-i18n="s1-t">海外注册代理（RA）</h3><p data-i18n="s1-d">目标国 RA 委任 / 本地代理人备案；协助完成 AR 卷宗整理、审评问答、现场/远程核查应对与证书签发跟踪。</p></div></div>
+  <div class="service-item"><div class="icon"><i class="fa-solid fa-scale-balanced"></i></div><div><h3 data-i18n="s2-t">法规策略 & 合规体系</h3><p data-i18n="s2-d">按产品分类（MD/IVD/Drug）输出国别准入路线图；搭建本地化标签、IFU、风险管理文件（ISO 14971）与技术文档结构。</p></div></div>
+  <div class="service-item"><div class="icon"><i class="fa-solid fa-shield-halved"></i></div><div><h3 data-i18n="s3-t">持证 & 上市后监管（PMS/PV）</h3><p data-i18n="s3-d">提供 MAH/持证代表服务；建立投诉记录、不良事件上报、趋势分析、CAPA 追踪与年度更新日历。</p></div></div>
+  <div class="service-item"><div class="icon"><i class="fa-solid fa-handshake"></i></div><div><h3 data-i18n="s4-t">贸易落地 & 渠道对接</h3><p data-i18n="s4-d">出口许可证、原产地证、报关单证与冷链/防湿/防磁包装方案；匹配进口商资质审查与经销协议框架。</p></div></div>
+</div></div>
+<footer class="ft"><div class="fg">
+  <div class="fb"><a href="index.html" class="logo"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a><p data-i18n="f-desc">专注医疗器械与药品出海合规、注册代理与市场准入服务。</p></div>
+  <div class="ff"><h4 data-i18n="nav">导航</h4><a href="index.html" data-i18n="m-home">首页</a><a href="product.html" data-i18n="m-prod">主要产品</a><a href="services.html" data-i18n="m-serv">服务项目</a><a href="library.html" data-i18n="m-lib">资料库</a><a href="contact.html" data-i18n="m-contact">联系我们</a></div>
+  <div class="ff"><h4 data-i18n="contact">联系</h4><p data-i18n="contact-email">bd@rolinbio.com</p><p data-i18n="contact-tel">+86-21-XXXX-XXXX</p></div>
+</div><div class="fbot"><span>&copy; 2025 Rolin Bio. All rights reserved.</span></div></footer>
+<script>
+const L={zh:{"site-title":"Rolin Bio | 服务项目","m-home":"首页","m-prod":"主要产品","m-serv":"服务项目","m-lib":"资料库","m-contact":"联系我们","s-tag":"SERVICES","s-title":"服务项目","s-lead":"从第一份注册策略报告，到持证上市后的每年续证与不良事件上报——全程可审计、可追溯。","s1-t":"海外注册代理（RA）","s1-d":"目标国 RA 委任 / 本地代理人备案；协助完成 AR 卷宗整理、审评问答、现场/远程核查应对与证书签发跟踪。","s2-t":"法规策略 & 合规体系","s2-d":"按产品分类（MD/IVD/Drug）输出国别准入路线图；搭建本地化标签、IFU、风险管理文件（ISO 14971）与技术文档结构。","s3-t":"持证 & 上市后监管（PMS/PV）","s3-d":"提供 MAH/持证代表服务；建立投诉记录、不良事件上报、趋势分析、CAPA 追踪与年度更新日历。","s4-t":"贸易落地 & 渠道对接","s4-d":"出口许可证、原产地证、报关单证与冷链/防湿/防磁包装方案；匹配进口商资质审查与经销协议框架。","nav":"导航","contact":"联系","contact-email":"bd@rolinbio.com","contact-tel":"+86-21-XXXX-XXXX","f-desc":"专注医疗器械与药品出海合规、注册代理与市场准入服务。"},
+en:{"site-title":"Rolin Bio | Services","m-home":"Home","m-prod":"Products","m-serv":"Services","m-lib":"Resources","m-contact":"Contact","s-tag":"SERVICES","s-title":"Our Services","s-lead":"From the first regulatory strategy report, to post-marketing surveillance after MA — fully auditable and traceable.","s1-t":"Overseas Registration Agent (RA)","s1-d":"Appoint/local-agent filing; organize AR dossiers, manage review Q&A, support inspections/audits and track certificate issuance.","s2-t":"Regulatory Strategy & Compliance System","s2-d":"Country-specific roadmap by product type (MD/IVD/Drug); localize labels, IFU, risk management (ISO 14971) and technical file structure.","s3-t":"MAH / Authorized Rep & PMS/PV","s3-d":"Provide MAH/authorized representation; build complaint files, adverse event reporting, trend analysis, CAPA tracking and renewal calendar.","s4-t":"Trade Landing & Channel Setup","s4-d":"Export license, COO, customs docs, cold-chain/moisture/magnet-safe packaging; screen importer qualifications and draft distribution agreements.","nav":"Navigation","contact":"Contact","contact-email":"bd@rolinbio.com","contact-tel":"+86-21-XXXX-XXXX","f-desc":"Specializing in medtech & pharma export compliance, registration agency and market access services."}};
+let currentLang='zh';function renderLang(lang){const t=L[lang]||L.zh;document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.getAttribute('data-i18n');if(t[key]!==undefined)el.innerHTML=t[key]});document.title=t['site-title']||'Rolin Bio';const btn=document.getElementById('langBtn');if(btn)btn.textContent=(lang==='zh'?'EN':'中文');document.documentElement.lang=lang;currentLang=lang}
+document.addEventListener('DOMContentLoaded',()=>{document.getElementById('langBtn')?.addEventListener('click',()=>{renderLang(currentLang==='zh'?'en':'zh')});document.getElementById('burgerBtn')?.addEventListener('click',()=>{document.getElementById('menu')?.classList.toggle('open')});renderLang('zh')});
+</script>
 </body>
 </html>
