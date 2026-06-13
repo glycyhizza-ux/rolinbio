@@ -171,4 +171,20 @@ function renderLang(lang){
         }
       }
     }
-    el.innerHTML
+    el.innerHTML=t[k];
+  });
+  // btn label
+  var btn=document.getElementById('langBtn');
+  if(btn)btn.textContent=(lang==='zh'?'EN':'中文');
+  document.documentElement.lang=lang;
+  try{localStorage.setItem('rolin-lang',lang)}catch(e){}
+}
+
+(function(){
+  var saved=((history.state&&history.state.__rl)||'');
+  try{if(!saved)saved=localStorage.getItem('rolin-lang')}catch(e){}
+  var lang=(saved==='en'?'en':'zh');
+  renderLang(lang);
+  var btn=document.getElementById('langBtn');
+  if(btn)btn.onclick=function(){renderLang(lang==='zh'?'en':'zh');lang=lang==='zh'?'en':'zh'};
+})();
