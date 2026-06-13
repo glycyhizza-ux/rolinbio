@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="site-title">Rolin Bio | 资料库</title>
+    <!-- 引入通用样式和图标 -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
+    <!-- 顶部通栏 -->
+    <div class="tb"><div class="tb-in">
+        <div class="tb-l"><span><i class="fa-solid fa-phone"></i> <span data-i18n="contact-tel"></span></span></div>
+        <div class="tb-r"><span><i class="fa-solid fa-envelope"></i> <span data-i18n="contact-email"></span></span></div>
+    </div></div>
+
+    <!-- 主导航栏 -->
+    <header class="hb"><div class="hb-in">
+        <a class="logo" href="index.html"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
+        
+        <!-- 桌面端菜单 (已加入 Library 链接) -->
+        <nav class="hm">
+            <ul>
+                <li><a href="index.html" data-i18n="m-home">首页</a></li>
+                <li><a href="product.html" data-i18n="m-prod">主要产品</a></li>
+                <li><a href="services.html" data-i18n="m-serv">服务项目</a></li>
+                <!-- 新增的 Library 链接 -->
+                <li><a href="library.html" data-i18n="m-lib">资料库</a></li>
+                <li><a href="contact.html" data-i18n="m-contact">联系我们</a></li>
+            </ul>
+        </nav>
+
+        <!-- 移动端汉堡按钮 -->
+        <div class="hb-r">
+            <button class="hb-lang nb-lang-switch"><span id="lang-btn" class="nb-lang-btn">EN</span></button>
+            <div class="hb-burger"><span></span><span></span><span></span></div>
+        </div>
+    </div></header>
+
+    <!-- 页面主内容区 -->
+    <main class="pg">
+        <div class="pg-bd">
+            
+            <!-- 页面标题 -->
+            <div class="pg-h">
+                <h1 data-i18n="lib-h1">行业资料库</h1>
+                <p data-i18n="lib-sub">汇聚前沿动态与专业洞察，助力您的研发与决策。
+            </div>
+
+            <!-- 文章列表区域 -->
+            <div class="nb-grid3">
+                
+                <!-- 文章卡片 1 -->
+                <article class="nb-card">
+                    <div class="nb-card-icon"><i class="fa-solid fa-file-waveform"></i></div>
+                    <h3 data-i18n="lib-card1-title">合成生物学最新突破</h3>
+                    <p data-i18n="lib-card1-desc">深度解析新型菌株构建技术，探讨其在药物量产中的成本优势与应用前景。
+                    <a href="#" class="nb-btn-primary" data-i18n="read-more">阅读全文</a>
+                </article>
+
+                <!-- 文章卡片 2 -->
+                <article class="nb-card">
+                    <div class="nb-card-icon"><i class="fa-solid fa-flask-vial"></i></div>
+                    <h3 data-i18n="lib-card2-title">细胞治疗工艺优化指南</h3>
+                    <p data-i18n="lib-card2-desc">从实验室到商业化生产，关键工艺节点的质控标准与放大生产策略。
+                    <a href="#" class="nb-btn-primary" data-i18n="read-more">阅读全文</a>
+                </article>
+
+                <!-- 文章卡片 3 -->
+                <article class="nb-card">
+                    <div class="nb-card-icon"><i class="fa-solid fa-microscope"></i></div>
+                    <h3 data-i18n="lib-card3-title">AI 赋能新药研发白皮书</h3>
+                    <p data-i18n="lib-card3-desc">人工智能如何缩短靶点发现周期，提升临床前研究效率的案例分析。
+                    <a href="#" class="nb-btn-primary" data-i18n="read-more">阅读全文</a>
+                </article>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="ft">
+        <div class="fg">
+            <div class="fb">
+                <a class="logo" href="index.html"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
+                <p style="font-size:.92rem;line-height:1.7;max-width:300px;margin-top:6px" data-i18n="f-desc">致力于提供高质量的生物技术解决方案，加速创新疗法的临床应用。
+            </div>
+            <div class="ff">
+                <h4 data-i18n="nav">导航</h4>
+                <a href="index.html" data-i18n="m-home">首页</a>
+                <a href="product.html" data-i18n="m-prod">主要产品</a>
+                <a href="services.html" data-i18n="m-serv">服务项目</a>
+                <a href="library.html" data-i18n="m-lib">资料库</a>
+            </div>
+            <div class="ff">
+                <h4 data-i18n="contact">联系</h4>
+                <p data-i18n="email">bd@rolinbio.com
+                <p data-i18n="tel">+86 123 4567 8910
+            </div>
+        </div>
+        <div class="fbot">
+            <span>&copy; 2025 Rolin Bio. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- 引入 JS -->
+    <script src="js/lang.js"></script>
+    <script>
+        // 移动端菜单逻辑
+        document.querySelector('.hb-burger')?.addEventListener('click', () => {
+            document.querySelector('.hm')?.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
