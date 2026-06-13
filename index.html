@@ -1,164 +1,84 @@
-<!-- 顶部通栏 -->
-<header class="nb-topbar">
-    <div class="nb-topbar-inner">
-        <div class="nb-topbar-left">
-            <i class="fa-solid fa-phone"></i> +86-20-8911-9292
-            <i class="fa-solid fa-envelope"></i> info@rolinbio.com
-        </div>
-        <div class="nb-topbar-right">
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <button class="nb-lang-switch">
-                <span class="nb-lang-btn" id="lang-btn">EN</span>
-            </button>
-        </div>
+<!DOCTYPE html><html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-i18n="site-title">Rolin Bio | 医疗器械与药品出海专家</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head><body>
+
+<div class="tb"><div class="tb-in">
+  <div><span><i class="fa-solid fa-phone"></i> <span data-i18n="tel">+86-21-XXXX-XXXX</span></span>
+  <span style="margin-left:16px"><i class="fa-solid fa-envelope"></i> <span data-i18n="email">bd@rolinbio.com</span></span></div>
+  <div class="tb-r">
+    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="#"><i class="fa-brands fa-weixin"></i></a>
+    <button class="lb" id="langBtn">EN</button>
+  </div>
+</div>
+
+<nav class="primary"><div class="nav-in">
+  <a class="logo" href="index.html"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
+  <ul class="nl" id="menu">
+    <li><a href="index.html" class="active" data-i18n="m-home">首页</a></li>
+    <li><a href="product.html" data-i18n="m-prod">主要产品</a></li>
+    <li><a href="services.html" data-i18n="m-serv">服务项目</a></li>
+    <li><a href="resources.html" data-i18n="m-res">资料库</a></li>
+    <li><a href="contact.html" data-i18n="m-contact">联系我们</a></li>
+  </ul>
+  <button class="burger" id="burger"><span></span><span></span><span></span></button>
+</div></nav>
+
+<section class="hero"><div class="hg">
+  <div>
+    <p class="ht" data-i18n="h-tag">MEDTECH & PHARMA · GLOBAL MARKET ACCESS</p>
+    <h1 data-i18n="h-title"><span data-i18n="h-title">让中国医疗产品</span><br><em>合规进入全球市场</em></h1>
+    <p class="hd" data-i18n="h-desc"></p>
+    <div class="hb">
+      <a href="services.html" class="btn btn-pri" data-i18n="h-cta1">查看服务</a>
+      <a href="contact.html" class="btn btn-out" data-i18n="h-cta2">对接 BD 团队</a>
     </div>
-</header>
+  </div>
+  <div class="hv"><div class="hvb"><i class="fa-solid fa-globe-americas"></i></div></div>
+</section>
 
-<!-- 主导航 -->
-<nav class="nb-navbar">
-    <div class="nb-navbar-inner">
-        <a href="index.html" class="nb-logo">
-            <i class="fa-solid fa-dna"></i> Rolin<span>Bio</span>
-        </a>
-        <ul class="nb-menu" id="main-menu">
-            <li><a href="index.html" data-i18n="nav-home">首页</a></li>
-            <li><a href="product.html" data-i18n="nav-product">主要产品</a></li>
-            <li><a href="services.html" data-i18n="nav-services">服务项目</a></li>
-            <li><a href="contact.html" data-i18n="nav-contact">联系我们</a></li>
-        </ul>
-        <div class="nb-burger" id="mobile-menu-btn">
-            <span></span><span></span><span></span>
-        </div>
-    </div>
-</nav>
+<section class="lm-s"><div class="lm-c">
+  <div class="st"><p class="stag" data-i18n="c-tag">CORE CAPABILITIES</p>
+    <h2 data-i18n="c-title">我们做什么</h2>
+    <p data-i18n="c-lead">从注册资料到持证上市，再到渠道落地，提供面向海外的端到端合规交付。</p>
+  </div>
+  <div class="g3">
+    <div class="card"><div class="ci"><i class="fa-solid fa-file-signature"></i></div>
+      <h3 data-i18n="c1-t"></h3><p data-i18n="c1-d"></p></div>
+    <div class="card"><div class="ci"><i class="fa-solid fa-shield-halved"></i></div>
+      <h3 data-i18n="c2-t"></h3><p data-i18n="c2-d"></p></div>
+    <div class="card"><div class="ci"><i class="fa-solid fa-route"></i></div>
+      <h3 data-i18n="c3-t"></h3><p data-i18n="c3-d"></p></div>
+  </div>
+</div></section>
 
-<!-- 主内容区 -->
-<main>
-    <!-- Hero 区域 -->
-    <section class="nb-hero">
-        <div class="nb-hero-inner">
-            <div class="nb-hero-text">
-                <h1 data-i18n="hero-title">赋能精准医疗，守护生命健康</h1>
-                <p data-i18n="hero-lead">Rolin Bio 是一家立足中国、面向全球的医疗产品供应商。我们专注于高品质医疗器械与药品的研发与分销，致力于为全球客户提供合规、可靠的一站式解决方案。
-                <div class="nb-hero-btns">
-                    <a href="product.html" class="nb-btn nb-btn-primary" data-i18n="hero-btn1">探索产品</a>
-                    <a href="contact.html" class="nb-btn nb-btn-secondary" data-i18n="hero-btn2">商务合作</a>
-                </div>
-            </div>
-            <div class="nb-hero-visual">
-                <!-- 这里用 CSS 画一个抽象的医学图形占位 -->
-                <div class="nb-hero-graphic"></div>
-            </div>
-        </div>
-    </section>
+<section class="lm-s lm-s--alt"><div class="lm-c">
+  <div class="st"><p class="stag" data-i18n="r-tag">REGIONAL EXPERTISE</p>
+    <h2 data-i18n="r-title">重点覆盖区域</h2>
+    <p data-i18n="r-lead">我们不只懂"法规条文"，更懂当地卫生当局、海关与分销生态的真实运作方式。</p>
+  </div>
+  <div class="tgs">
+    <span class="tg" data-i18n="reg1"></span>
+    <span class="tg" data-i18n="reg2"></span>
+    <span class="tg" data-i18n="reg3"></span>
+    <span class="tg" data-i18n="reg4"></span>
+    <span class="tg" data-i18n="reg5"></span>
+  </div>
+</div></section>
 
-    <!-- 信任背书 -->
-    <section class="nb-trust">
-        <div class="nb-container">
-            <div class="nb-trust-text" data-i18n="trust-text">Trusted by leading healthcare providers worldwide</div>
-            <div class="nb-trust-logos">
-                <span class="nb-logo-text">ISO</span>
-                <span class="nb-logo-text">WHO-GMP</span>
-                <span class="nb-logo-text">FDA</span>
-                <span class="nb-logo-text">CE</span>
-            </div>
-        </div>
-    </section>
+<footer class="ft"><div class="fg">
+  <div class="fb"><a class="logo" href="index.html"><span class="ico"><i class="fa-solid fa-dna"></i></span> Rolin Bio</a>
+    <p style="font-size:.92rem;line-height:1.7;max-width:300px;margin-top:6px" data-i18n="f-desc">专注医疗器械与药品出海合规、注册代理与市场准入服务。</p></div>
+  <div class="ff"><h4>导航</h4>
+    <a href="index.html" data-i18n="m-home">首页</a>
+    <a href="product.html" data-i18n="m-prod">主要产品</a>
+    <a href="services.html" data-i18n="m-serv">服务项目</a>
+    <a href="resources.html" data-i18n="m-res">资料库</a></div>
+  <div class="ff"><h4>联系</h4><p data-i18n="email">bd@rolinbio.com</p><p data-i18n="tel">+86-21-XXXX-XXXX</p></div>
+</div><div class="fbot"><span>&copy; 2025 Rolin Bio. All rights reserved.</span></div></footer>
 
-    <!-- 产品分类 -->
-    <section class="nb-section">
-        <div class="nb-container">
-            <div class="nb-section-header">
-                <h2 class="nb-section-h2" data-i18n="product-title">核心产品领域</h2>
-                <p class="nb-section-lead" data-i18n="product-lead">涵盖医疗器械与药品两大领域，满足全球市场需求
-            </div>
-            <div class="nb-grid3">
-                <div class="nb-card">
-                    <div class="nb-card-icon"><i class="fa-solid fa-syringe"></i></div>
-                    <h3 data-i18n="p1-title">注射器 & 输液器</h3>
-                    <p data-i18n="p1-desc">高品质一次性医用耗材，符合 ISO 13485 标准
-                </div>
-                <div class="nb-card">
-                    <div class="nb-card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                    <h3 data-i18n="p2-title">监护仪 & 诊断设备</h3>
-                    <p data-i18n="p2-desc">多参数监护仪、血压计、血糖仪等家用及临床设备
-                </div>
-                <div class="nb-card">
-                    <div class="nb-card-icon"><i class="fa-solid fa-pills"></i></div>
-                    <h3 data-i18n="p3-title">抗生素 & 常用药品</h3>
-                    <p data-i18n="p3-desc">通过 WHO-GMP 认证的原料药及制剂
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 页脚 -->
-    <footer class="nb-footer">
-        <div class="nb-footer-inner">
-            <div class="nb-footer-brand">
-                <a href="index.html" class="nb-logo"><i class="fa-solid fa-dna"></i> Rolin<span>Bio</span></a>
-                <p data-i18n="footer-text">专业的医疗产品供应商，让优质的医疗技术触手可及。
-            </div>
-            <div class="nb-footer-links">
-                <a href="index.html" data-i18n="nav-home">首页</a>
-                <a href="product.html" data-i18n="nav-product">主要产品</a>
-                <a href="services.html" data-i18n="nav-services">服务项目</a>
-                <a href="contact.html" data-i18n="nav-contact">联系我们</a>
-            </div>
-            <div class="nb-footer-copy">
-                &copy; 2024 Rolin Bio. All Rights Reserved.
-            </div>
-        </div>
-    </footer>
-</main>
-
-<script>
-    // 简单语言切换逻辑
-    const translations = {
-        'zh': {
-            'nav-home': '首页', 'nav-product': '主要产品', 'nav-services': '服务项目', 'nav-contact': '联系我们',
-            'hero-title': '赋能精准医疗，守护生命健康',
-            'hero-lead': 'Rolin Bio 是一家立足中国、面向全球的医疗产品供应商。我们专注于高品质医疗器械与药品的研发与分销，致力于为全球客户提供合规、可靠的一站式解决方案。',
-            'hero-btn1': '探索产品', 'hero-btn2': '商务合作',
-            'trust-text': 'Trusted by leading healthcare providers worldwide',
-            'product-title': '核心产品领域', 'product-lead': '涵盖医疗器械与药品两大领域，满足全球市场需求',
-            'p1-title': '注射器 & 输液器', 'p1-desc': '高品质一次性医用耗材，符合 ISO 13485 标准',
-            'p2-title': '监护仪 & 诊断设备', 'p2-desc': '多参数监护仪、血压计、血糖仪等家用及临床设备',
-            'p3-title': '抗生素 & 常用药品', 'p3-desc': '通过 WHO-GMP 认证的原料药及制剂',
-            'footer-text': '专业的医疗产品供应商，让优质的医疗技术触手可及。'
-        },
-        'en': {
-            'nav-home': 'Home', 'nav-product': 'Products', 'nav-services': 'Services', 'nav-contact': 'Contact',
-            'hero-title': 'Empowering Precision Medicine',
-            'hero-lead': 'Rolin Bio provides high-quality medical devices and pharmaceuticals worldwide. We are committed to offering compliant and reliable solutions.',
-            'hero-btn1': 'Explore Products', 'hero-btn2': 'Work With Us',
-            'trust-text': 'Trusted by leading healthcare providers worldwide',
-            'product-title': 'Core Product Areas',
-            'product-lead': 'Covering medical devices and pharmaceuticals to meet global market demands.',
-            'p1-title': 'Syringes & Infusion Sets', 'p1-desc': 'High-quality disposable medical consumables, ISO 13485 certified.',
-            'p2-title': 'Monitors & Diagnostic Devices', 'p2-desc': 'Multi-parameter monitors, blood pressure monitors, glucometers, etc.',
-            'p3-title': 'Antibiotics & Pharmaceuticals', 'p3-desc': 'APIs and formulations certified by WHO-GMP.',
-            'footer-text': 'A professional medical supplier dedicated to making quality healthcare accessible.'
-        }
-    };
-    
-    let currentLang = 'zh';
-    function applyLanguage(lang) {
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            if (translations[lang][key]) el.innerHTML = translations[lang][key];
-        });
-        document.getElementById('lang-btn').textContent = lang === 'zh' ? 'EN' : '中文';
-    }
-    document.getElementById('lang-btn').addEventListener('click', () => {
-        currentLang = currentLang === 'zh' ? 'en' : 'zh';
-        applyLanguage(currentLang);
-    });
-    
-    // 汉堡菜单
-    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-        document.getElementById('main-menu').classList.toggle('open');
-    });
-</script>
+<script src="js/lang.js"></script>
+</body></html>
