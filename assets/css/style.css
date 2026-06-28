@@ -62,11 +62,11 @@ body {
 }
 
 /* --- Language Toggle --- */
-[lang] { display: none; }
-html[data-lang="en"] [lang="en"],
-html[data-lang="zh"] [lang="zh"] { display: revert; }
-html[data-lang="en"] [lang="inline-en"],
-html[data-lang="zh"] [lang="inline-zh"] { display: inline; }
+body [lang="en"], body [lang="zh"] { display: none; }
+html[data-lang="en"] body [lang="en"],
+html[data-lang="zh"] body [lang="zh"] { display: block; }
+html[data-lang="en"] body [lang="inline-en"],
+html[data-lang="zh"] body [lang="inline-zh"] { display: inline; }
 
 /* --- Typography --- */
 h1, h2, h3, h4, h5, h6 {
