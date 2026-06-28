@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Rolin Bio - Get in touch for regulatory access, market consulting, and overseas commercialization support for Chinese pharmaceutical and medical device companies.">
+  <title>Contact Us - Rolin Bio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <nav class="nav" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-icon">R</span>
+        <span>Rolin Bio</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="news/">News</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-switch" id="langSwitch" onclick="toggleLang()">
+          <span class="active" data-lang-en="active">EN</span> | <span data-lang-zh="active">中文</span>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobile()" aria-label="Toggle menu">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1 lang="en">Contact Us</h1>
+      <h1 lang="zh">联系我们</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Contact</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section-label" lang="en">Get in Touch</span>
+          <span class="section-label" lang="zh">取得联系</span>
+          <h2 lang="en">Let's Start a Conversation</h2>
+          <h2 lang="zh">开启对话</h2>
+          <p lang="en">Whether you're a Chinese pharma or medtech company exploring overseas markets, or an international partner seeking collaboration, we'd love to hear from you.</p>
+          <p lang="zh">无论您是正在探索海外市场的中国医药医疗器械企业，还是寻求合作的国际伙伴，我们期待与您交流。</p>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">&#128205;</div>
+            <div>
+              <h4 lang="en">Address</h4>
+              <h4 lang="zh">地址</h4>
+              <span>Shanghai, China</span>
+              <span lang="zh">中国 上海</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">&#128231;</div>
+            <div>
+              <h4 lang="en">Email</h4>
+              <h4 lang="zh">邮箱</h4>
+              <span>info@rolinbio.com</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">&#128222;</div>
+            <div>
+              <h4 lang="en">Phone</h4>
+              <h4 lang="zh">电话</h4>
+              <span>+86-21-XXXX-XXXX</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+          <div class="form-group">
+            <label lang="en">Your Name *</label>
+            <label lang="zh">您的姓名 *</label>
+            <input type="text" required placeholder="Full name">
+          </div>
+          <div class="form-group">
+            <label lang="en">Company</label>
+            <label lang="zh">公司名称</label>
+            <input type="text" placeholder="Your company">
+          </div>
+          <div class="form-group">
+            <label lang="en">Email Address *</label>
+            <label lang="zh">电子邮箱 *</label>
+            <input type="email" required placeholder="you@company.com">
+          </div>
+          <div class="form-group">
+            <label lang="en">Interest Area</label>
+            <label lang="zh">关注领域</label>
+            <select>
+              <option value="" lang="en">Select an option</option>
+              <option value="" lang="zh">请选择</option>
+              <option value="regulatory" lang="en">Regulatory Access</option>
+              <option value="regulatory" lang="zh">法规准入</option>
+              <option value="devices" lang="en">Medical Devices</option>
+              <option value="devices" lang="zh">医疗器械</option>
+              <option value="pharma" lang="en">Pharma Marketing</option>
+              <option value="pharma" lang="zh">药品市场营销</option>
+              <option value="consulting" lang="en">Market Consulting</option>
+              <option value="consulting" lang="zh">市场咨询</option>
+              <option value="other" lang="en">Other</option>
+              <option value="other" lang="zh">其他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label lang="en">Message *</label>
+            <label lang="zh">留言 *</label>
+            <textarea required placeholder="Tell us about your needs..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">
+            <span lang="en">Send Message</span>
+            <span lang="zh">发送消息</span>
+          </button>
+          <p id="formSuccess" style="display:none; color: var(--teal-dark); margin-top: 12px; font-weight: 600; text-align: center;" lang="en">Thank you! We'll be in touch soon.</p>
+          <p id="formSuccessZh" style="display:none; color: var(--teal-dark); margin-top: 12px; font-weight: 600; text-align: center;" lang="zh">感谢您的留言！我们会尽快与您联系。</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Rolin Bio</h3>
+          <p lang="en">Bridging China's medical innovation to the world.</p>
+          <p lang="zh">连接中国医药创新与世界。</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="news/">News</a></li><li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#regulatory">Regulatory Access</a></li><li><a href="services.html#devices">Medical Devices</a></li><li><a href="services.html#pharma">Pharma Marketing</a></li><li><a href="services.html#supply">Supply Chain</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li>&#128205; Shanghai, China</li>
+            <li>&#128231; info@rolinbio.com</li>
+            <li>&#128222; +86-21-XXXX-XXXX</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Rolin Bio. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

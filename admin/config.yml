@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+locale: en
+
+collections:
+  - name: "news"
+    label: "News & Insights"
+    label_singular: "News Article"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Market Access", value: "market-access" }
+          - { label: "Regulatory Update", value: "regulatory" }
+          - { label: "Industry Trends", value: "trends" }
+          - { label: "Company News", value: "company" }
+          - { label: "Case Study", value: "case-study" }
+      - label: "Excerpt"
+        name: "excerpt"
+        widget: "text"
+        hint: "Short summary shown in news listing (max 150 characters)"
+      - label: "Featured Image"
+        name: "image"
+        widget: "image"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "content/pages/home.md"
+        fields:
+          - label: "Hero Title (EN)"
+            name: "hero_title_en"
+            widget: "string"
+          - label: "Hero Title (ZH)"
+            name: "hero_title_zh"
+            widget: "string"
+          - label: "Hero Subtitle (EN)"
+            name: "hero_subtitle_en"
+            widget: "text"
+          - label: "Hero Subtitle (ZH)"
+            name: "hero_subtitle_zh"
+            widget: "text"
